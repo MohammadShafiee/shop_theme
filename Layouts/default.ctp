@@ -412,186 +412,40 @@
 </div>
 
 <div class="navbar-collapse collapse">
-<ul class="nav navbar-nav">
-    <li class="active"><a href="#"> Home </a></li>
-    <li class="dropdown megamenu-fullwidth">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#"> New Products <b
-                class="caret"> </b> </a>
-        <ul class="dropdown-menu">
-            <li class="megamenu-content ">
-                <ul class="col-lg-3  col-sm-3 col-md-3 unstyled noMarginLeft newCollectionUl">
-                    <li class="no-border">
-                        <p class="promo-1"><strong> NEW COLLECTION </strong></p>
-                    </li>
-                    <li><a href="category.html"> ALL NEW PRODUCTS </a></li>
-                    <li><a href="category.html"> NEW TOPS </a></li>
-                    <li><a href="category.html"> NEW SHOES </a></li>
-                    <li><a href="category.html"> NEW TSHIRT </a></li>
-                    <li><a href="category.html"> NEW TSHOP </a></li>
-                </ul>
-                <ul class="col-lg-3  col-sm-3 col-md-3  col-xs-4">
-                    <li><a class="newProductMenuBlock" href="product-details.html">
-                            <?php echo $this->Html->image('/images/site/promo1.jpg', array(
-                                    'class' => 'img-responsive',
-                                    'alt' => 'product',
-                                )); ?>
-                            <span class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> JEANS </span> </a></li>
-                </ul>
-                <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                    <li><a class="newProductMenuBlock" href="product-details.html">
-                            <?php echo $this->Html->image('/images/site/promo2.jpg', array(
-                                'class' => 'img-responsive',
-                                'alt' => 'product',
-                            )); ?> <span
-                                class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> PARTY DRESS </span> </a>
-                    </li>
-                </ul>
-                <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-4">
-                    <li><a class="newProductMenuBlock" href="product-details.html">
-                            <?php echo $this->Html->image('/images/site/promo3.jpg', array(
-                                'class' => 'img-responsive',
-                                'alt' => 'product',
-                            )); ?>
-                            <span
-                                class="ProductMenuCaption"> <i class="fa fa-caret-right"> </i> SHOES </span> </a></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="dropdown megamenu-80width ">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#"> SHOP <b
-                class="caret"> </b> </a>
-        <ul class="dropdown-menu">
-            <li class="megamenu-content">
-
-                <ul class="col-lg-2  col-sm-2 col-md-2  unstyled noMarginLeft">
-                    <li>
-                        <p><strong> Women Collection </strong></p>
-                    </li>
-                    <li><a href="#"> Kameez </a></li>
-                    <li><a href="#"> Tops </a></li>
-                    <li><a href="#"> Shoes </a></li>
-                    <li><a href="#"> T shirt </a></li>
-                    <li><a href="#"> TSHOP </a></li>
-                    <li><a href="#"> Party Dress </a></li>
-                    <li><a href="#"> Women Fragrances </a></li>
-                </ul>
-                <ul class="col-lg-2  col-sm-2 col-md-2  unstyled">
-                    <li>
-                        <p><strong> Men Collection </strong></p>
-                    </li>
-                    <li><a href="#"> Panjabi </a></li>
-                    <li><a href="#"> Male Fragrances </a></li>
-                    <li><a href="#"> Scarf </a></li>
-                    <li><a href="#"> Sandal </a></li>
-                    <li><a href="#"> Underwear </a></li>
-                    <li><a href="#"> Winter Collection </a></li>
-                    <li><a href="#"> Men Accessories </a></li>
-                </ul>
-                <ul class="col-lg-2  col-sm-2 col-md-2  unstyled">
-                    <li>
-                        <p><strong> Top Brands </strong></p>
-                    </li>
-                    <li><a href="#"> Diesel </a></li>
-                    <li><a href="#"> Farah </a></li>
-                    <li><a href="#"> G-Star RAW </a></li>
-                    <li><a href="#"> Lyle & Scott </a></li>
-                    <li><a href="#"> Pretty Green </a></li>
-                    <li><a href="#"> TSHOP </a></li>
-                    <li><a href="#"> TANJIM </a></li>
-                </ul>
-                <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-6">
-                    <li class="no-margin productPopItem "><a href="product-details.html">
-                            <?php echo $this->Html->image('/images/site/g4.jpg', array(
-                                'class' => 'img-responsive',
-                                'alt' => 'img',
-                            )); ?> </a> <a
-                            class="text-center productInfo alpha90" href="product-details.html"> Eodem modo typi <br>
-                            <span> $60 </span> </a></li>
-                </ul>
-                <ul class="col-lg-3  col-sm-3 col-md-3 col-xs-6">
-                    <li class="no-margin productPopItem relative"><a href="product-details.html">
-                            <?php echo $this->Html->image('/images/site/g5.jpg', array(
-                                'class' => 'img-responsive',
-                                'alt' => 'product',
-                            )); ?>
-                             </a> <a
-                            class="text-center productInfo alpha90" href="product-details.html"> Eodem modo typi <br>
-                            <span> $60 </span> </a></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-
-    <li class="dropdown megamenu-fullwidth">
-        <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <?php echo __d('shop', 'Categories'); ?> <b
-                class="caret"> </b> </a>
-        <ul class="dropdown-menu">
-            <li class="megamenu-content">
-
-                <h3 class="promo-1 no-margin hidden-xs"> 40+ HTML PAGES || AVAILABLE ONLY AT WRAP BOOTSTRAP </h3>
-
-                <h3 class="promo-1sub hidden-xs"> Complete Parallax E-Commerce Boostrap Template, Responsive on any
-                    Device, 10+ color Theme + Parallax Effect </h3>
-
-                <?php
-                    $printUl = false;
-                    foreach($categories_for_layout as $category): ?>
-                    <?php
-                        if($printUl == true && mb_substr($category, 0, 1) != '_' ):
-                            $printUl = false;
-                    ?>
-                                </ul>
-                    <?php endif; ?>
-                    <?php
-                        if(mb_substr($category, 0, 1) != '_'):
-                        $printUl = true;
-                    ?>
-                            <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                                <li class="no-border">
-                                    <p><strong> <?php echo $category; ?> </strong></p>
-                                </li>
-                    <?php
-                        else: ?>
-                            <li><a href="index.html"> <?php echo $category; ?> </a></li>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-                <?php if($printUl){ echo '</ul>';} ?>
-                <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                    <li class="no-border">
-                        <p><strong> Featured Pages </strong></p>
-                    </li>
-                    <li><a href="category.html"> Category </a></li>
-                    <li><a href="category2.html"> Category Style 2 [Parallax] </a></li>
-                    <li><a href="sub-category.html"> Sub Category </a></li>
-                    <li><a href="category-list.html"> Category List View </a></li>
-                    <li><a href="category-product-hover.html"> Category [Product Hover] </a></li>
-                </ul>
-                <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                    <li class="no-border">
-                        <p><strong> &nbsp; </strong></p>
-                    </li>
-                    <li><a href="cart.html"> Cart </a></li>
-                    <li><a href="blog.html"> Blog </a></li>
-                    <li><a href="blog-details.html"> Blog Details </a></li>
-                    <li><a href="contact-us.html"> Contact us </a></li>
-                    <li><a href="contact-us-2.html"> Contact us 2 (No Fixed Map) </a></li>
-                    <li><a href="terms-conditions.html"> Terms &amp; Conditions </a></li>
-                </ul>
-                <ul class="col-lg-2  col-sm-2 col-md-2 unstyled">
-                    <li class="no-border">
-                        <p><strong> Checkout </strong></p>
-                    </li>
-                    <li><a href="checkout-0.html"> Checkout Before </a></li>
-                    <li><a href="checkout-1.html"> checkout step 1 </a></li>
-                    <li><a href="checkout-2.html"> checkout step 2 </a></li>
-                    <li><a href="checkout-3.html"> checkout step 3 </a></li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#"> Home </a></li>
+        <li class="dropdown megamenu-80width ">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> SHOP <b class="caret"> </b> </a>
+            <ul class="dropdown-menu">
+                <li class="megamenu-content">
+                    <ul class="col-lg-2  col-sm-2 col-md-2  unstyled noMarginLeft">
+                        <li>
+                            <p><strong> Women Collection </strong></p>
+                        </li>
+                        <li><a href="#"> Kameez </a></li>
+                        <li><a href="#"> Tops </a></li>
+                        <li><a href="#"> Shoes </a></li>
+                        <li><a href="#"> T shirt </a></li>
+                        <li><a href="#"> TSHOP </a></li>
+                        <li><a href="#"> Party Dress </a></li>
+                        <li><a href="#"> Women Fragrances </a></li>
+                    </ul>
+                    <ul class="col-lg-2  col-sm-2 col-md-2  unstyled">
+                        <li>
+                            <p><strong> Men Collection </strong></p>
+                        </li>
+                        <li><a href="#"> Panjabi </a></li>
+                        <li><a href="#"> Male Fragrances </a></li>
+                        <li><a href="#"> Scarf </a></li>
+                        <li><a href="#"> Sandal </a></li>
+                        <li><a href="#"> Underwear </a></li>
+                        <li><a href="#"> Winter Collection </a></li>
+                        <li><a href="#"> Men Accessories </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
 
 <div class="nav navbar-nav navbar-right hidden-xs">
     <div class="dropdown  cartMenu "><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i
@@ -760,12 +614,9 @@
 </div>
 </div>
 
-
-<div class="container main-container">
     <?php
     echo $content_for_layout;
     ?>
-</div>
 
 <footer>
     <div class="footer">
@@ -900,53 +751,14 @@
     </div>
 
 </footer>
-<div class="modal fade hide" id="modalAds" role="dialog">
-    <div class="modal-dialog  modal-bg-1">
-        <div class="modal-body-content">
-            <a class="close" data-dismiss="modal">×</a>
-
-            <div class="modal-body">
-                <div class="col-lg-6 col-sm-8 col-xs-8">
-                    <h3>enter your <br>email to receive</h3>
-
-                    <p class="discountLg">10% OFF </p>
-
-                    <p>We invite you to subscribe to our newsletter and receive 10% discount.
-                    </p>
-
-                    <div class="clearfx">
-                        <form id="newsletter" class="newsletter">
-                            <input type="text" id="subscribe" name="s" placeholder="Enter email">
-                            <button class="subscribe-btn">Subscribe</button>
-                        </form>
-                    </div>
-                    <p><a href="category.html" class="link shoplink"> SHOP NOW <i class="fa fa-caret-right"> </i> </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <?php
-echo $this->Html->script(array(
+    echo $this->Html->script(array(
     'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
     '/assets/bootstrap/js/bootstrap.min.js',
 
-));
-?>
-<script>
-    // this script required for subscribe modal
-    $(window).load(function () {
-        // full load
-        $('#modalAds').modal('show');
-        $('#modalAds').removeClass('hide');
-    });
-</script>
-
-<?php
-echo $this->Html->script(array(
+    ));
+    echo $this->Html->script(array(
     '/assets/js/jquery.cycle2.min.js',
     '/assets/js/jquery.easing.1.3.js',
     '/assets/js/jquery.parallax-1.1.js',
