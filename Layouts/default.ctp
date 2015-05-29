@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script type="text/javascript">
         //<![CDATA[
         try {
@@ -42,10 +41,12 @@
         '/assets/css/skin-3.css',
         '/assets/css/style.css',
     ));
+    echo $this->fetch('css');
     echo $this->Html->script(array(
         '/assets/js/pace.min.js',
         '/assets/js/pace.min.js',
     ));
+    echo $this->fetch('topScript');
     ?>
 
 
@@ -772,6 +773,7 @@
     '/assets/js/home.js',
     '/assets/js/script.js',
 ));
+    echo $this->fetch('bottomScript');
 ?>
 <script type="text/javascript">
     /* <![CDATA[ */
