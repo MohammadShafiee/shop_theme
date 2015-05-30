@@ -44,7 +44,6 @@
     ));
     echo $this->Html->script(array(
         '/assets/js/pace.min.js',
-        '/assets/js/pace.min.js',
     ));
     ?>
 
@@ -232,392 +231,133 @@
 
 </div>
 <div style="height: 100px; position: relative">
-<div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
-<div class="navbar-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
-                <div class="pull-left ">
-                    <ul class="userMenu ">
-                        <li><a href="#"> <span class="hidden-xs">HELP</span><i
-                                    class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a></li>
-                        <li class="phone-number"><a href="callto:+88016000000"> <span> <i
-                                        class="glyphicon glyphicon-phone-alt "></i></span> <span class="hidden-xs"
-                                                                                                 style="margin-left:5px"> 88 01680 53 1352 </span>
-                            </a></li>
-                    </ul>
+    <div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
+        <?php
+            echo $this->element('top_menu');
+            echo $this->element('main_menu');
+        ?>
+    </div>
+</div>
+    <div class="container main-container">
+        <?php
+            echo $content_for_layout;
+        ?>
+    </div>
+    <div class="modal fade" id="product-details-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button"> × </button>
+            <div class="col-lg-5 col-md-5 col-sm-5  col-xs-12">
+
+                <div class="main-image  col-lg-12 no-padding style3">
+                    <a class="product-largeimg-link" href="product-details.html">
+                        <?php echo $this->Html->image('/images/zoom/zoom1.jpg', array(
+                            'class' => 'img-responsive product-largeimg',
+                            'alt' => 'img',
+                        ));
+                        ?>
+                    </a>
+                </div>
+
+                <div class="modal-product-thumb">
+                    <a class="thumbLink selected">
+                        <?php echo $this->Html->image('/images/zoom/zoom1.jpg', array(
+                            'class' => 'img-responsive',
+                            'alt' => 'img',
+                        ));
+                        ?>
+                    </a>
+                    <a class="thumbLink">
+                        <?php echo $this->Html->image('/images/zoom/zoom2.jpg', array(
+                            'class' => 'img-responsive',
+                            'alt' => 'img',
+                        ));
+                        ?>
+                    </a>
+                    <a class="thumbLink">
+                        <?php echo $this->Html->image('/images/zoom/zoom3.jpg', array(
+                            'class' => 'img-responsive',
+                            'alt' => 'img',
+                        ));
+                        ?>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
-                <div class="pull-right">
-                    <ul class="userMenu">
-                        <li><a href="account-1.html"><span class="hidden-xs"> My Account</span> <i
-                                    class="glyphicon glyphicon-user hide visible-xs "></i></a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#ModalLogin"> <span
-                                    class="hidden-xs">Sign In</span> <i
-                                    class="glyphicon glyphicon-log-in hide visible-xs "></i> </a></li>
-                        <li class="hidden-xs"><a href="#" data-toggle="modal" data-target="#ModalSignup"> Create
-                                Account </a></li>
-                    </ul>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 modal-details no-padding">
+                <div class="modal-details-inner">
+                    <h1 class="product-title"> Lorem ipsum dolor sit amet</h1>
+                    <h3 class="product-code">Product Code : DEN1098</h3>
+                    <div class="product-price"> <span class="price-sales"> $70</span> <span class="price-standard">$95</span> </div>
+                    <div class="details-description">
+                        <p>In scelerisque libero ut elit porttitor commodo Suspendisse laoreet magna. </p>
+                    </div>
+                    <div class="color-details"> <span class="selected-color"><strong>COLOR</strong></span>
+                        <ul class="swatches Color">
+                            <li class="selected">
+                                <a style="background-color:#f1f40e"> </a>
+                            </li>
+                            <li>
+                                <a style="background-color:#adadad"> </a>
+                            </li>
+                            <li>
+                                <a style="background-color:#4EC67F"> </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="productFilter productFilterLook2">
+                        <div class="filterBox">
+                            <select>
+                                <option value="strawberries" selected>Quantity</option>
+                                <option value="mango">1</option>
+                                <option value="bananas">2</option>
+                                <option value="watermelon">3</option>
+                                <option value="grapes">4</option>
+                                <option value="oranges">5</option>
+                                <option value="pineapple">6</option>
+                                <option value="peaches">7</option>
+                                <option value="cherries">8</option>
+                            </select>
+                        </div>
+                        <div class="filterBox">
+                            <select>
+                                <option value="strawberries" selected>Size</option>
+                                <option value="mango">XL</option>
+                                <option value="bananas">XXL</option>
+                                <option value="watermelon">M</option>
+                                <option value="apples">L</option>
+                                <option value="apples">S</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cart-actions">
+                        <div class="addto">
+                            <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Add to Cart</button>
+                            <a class="link-wishlist wishlist">Add to Wishlist</a> </div>
+                    </div>
+
+                    <div class="product-share clearfix">
+                        <p> SHARE </p>
+                        <div class="socialIcon">
+                            <a href="#"> <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#"> <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#"> <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#"> <i class="fa fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+            <div class="clear"></div>
         </div>
     </div>
 </div>
-
-<div class="container">
-<div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
-            class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span>
-        <span class="icon-bar"> </span></button>
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"><i
-            class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span>
-    </button>
-    <a class="navbar-brand " href="index.html">
-        <?php echo $this->Html->image('/images/logo.png', array('alt' => 'TSHOP')); ?>
-    </a>
-
-    <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
-        <div class="input-group">
-            <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
-        </div>
-
-    </div>
-</div>
-
-<div class="navbar-cart  collapse">
-    <div class="cartMenu  col-lg-4 col-xs-12 col-md-4 ">
-        <div class="w100 miniCartTable scroll-pane">
-            <table>
-                <tbody>
-                <tr class="miniCartProduct">
-                    <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html">
-                                <?php echo $this->Html->image('/images/product/3.jpg', array('alt' => 'img')); ?>
-                            </a></div>
-                    </td>
-                    <td style="40%">
-                        <div class="miniCartDescription">
-                            <h4><a href="product-details.html"> TSHOP T shirt Black </a></h4>
-                            <span class="size"> 12 x 1.5 L </span>
-
-                            <div class="price"><span> $8.80 </span></div>
-                        </div>
-                    </td>
-                    <td style="10%" class="miniCartQuantity"><a> X 1 </a></td>
-                    <td style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td style="5%" class="delete"><a> x </a></td>
-                </tr>
-                <tr class="miniCartProduct">
-                    <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html">
-                                <?php echo $this->Html->image('/images/product/2.jpg', array('alt' => 'img')); ?>
-                            </a></div>
-                    </td>
-                    <td style="40%">
-                        <div class="miniCartDescription">
-                            <h4><a href="product-details.html"> TSHOP T shirt Black </a></h4>
-                            <span class="size"> 12 x 1.5 L </span>
-
-                            <div class="price"><span> $8.80 </span></div>
-                        </div>
-                    </td>
-                    <td style="10%" class="miniCartQuantity"><a> X 1 </a></td>
-                    <td style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td style="5%" class="delete"><a> x </a></td>
-                </tr>
-                <tr class="miniCartProduct">
-                    <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html">
-                                <?php echo $this->Html->image('/images/product/5.jpg', array('alt' => 'img')); ?>
-                            </a></div>
-                    </td>
-                    <td style="40%">
-                        <div class="miniCartDescription">
-                            <h4><a href="product-details.html"> TSHOP T shirt Black </a></h4>
-                            <span class="size"> 12 x 1.5 L </span>
-
-                            <div class="price"><span> $8.80 </span></div>
-                        </div>
-                    </td>
-                    <td style="10%" class="miniCartQuantity"><a> X 1 </a></td>
-                    <td style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td style="5%" class="delete"><a> x </a></td>
-                </tr>
-                <tr class="miniCartProduct">
-                    <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html">
-                                <?php echo $this->Html->image('/images/product/3.jpg', array('alt' => 'img')); ?>
-                            </a></div>
-                    </td>
-                    <td style="40%">
-                        <div class="miniCartDescription">
-                            <h4><a href="product-details.html"> TSHOP T shirt Black </a></h4>
-                            <span class="size"> 12 x 1.5 L </span>
-
-                            <div class="price"><span> $8.80 </span></div>
-                        </div>
-                    </td>
-                    <td style="10%" class="miniCartQuantity"><a> X 1 </a></td>
-                    <td style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td style="5%" class="delete"><a> x </a></td>
-                </tr>
-                <tr class="miniCartProduct">
-                    <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html">
-                                <?php echo $this->Html->image('/images/product/3.jpg', array('alt' => 'img')); ?>
-                            </a></div>
-                    </td>
-                    <td style="40%">
-                        <div class="miniCartDescription">
-                            <h4><a href="product-details.html"> TSHOP T shirt Black </a></h4>
-                            <span class="size"> 12 x 1.5 L </span>
-
-                            <div class="price"><span> $8.80 </span></div>
-                        </div>
-                    </td>
-                    <td style="10%" class="miniCartQuantity"><a> X 1 </a></td>
-                    <td style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td style="5%" class="delete"><a> x </a></td>
-                </tr>
-                <tr class="miniCartProduct">
-                    <td style="20%" class="miniCartProductThumb">
-                        <div><a href="product-details.html">
-                                <?php echo $this->Html->image('/images/product/4.jpg', array('alt' => 'img')); ?>
-                            </a></div>
-                    </td>
-                    <td style="40%">
-                        <div class="miniCartDescription">
-                            <h4><a href="product-details.html"> TSHOP T shirt Black </a></h4>
-                            <span class="size"> 12 x 1.5 L </span>
-
-                            <div class="price"><span> $8.80 </span></div>
-                        </div>
-                    </td>
-                    <td style="10%" class="miniCartQuantity"><a> X 1 </a></td>
-                    <td style="15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                    <td style="5%" class="delete"><a> x </a></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="miniCartFooter  miniCartFooterInMobile text-right">
-            <h3 class="text-right subtotal"> Subtotal: $210 </h3>
-            <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VIEW CART </a> <a
-                class="btn btn-sm btn-primary"> CHECKOUT </a></div>
-
-    </div>
-
-</div>
-
-<div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-        <li class="active"><a href="#"> Home </a></li>
-        <li class="dropdown megamenu-80width ">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> SHOP <b class="caret"> </b> </a>
-            <ul class="dropdown-menu">
-                <li class="megamenu-content">
-                    <ul class="col-lg-2  col-sm-2 col-md-2  unstyled noMarginLeft">
-                        <li>
-                            <p><strong> Women Collection </strong></p>
-                        </li>
-                        <li><a href="#"> Kameez </a></li>
-                        <li><a href="#"> Tops </a></li>
-                        <li><a href="#"> Shoes </a></li>
-                        <li><a href="#"> T shirt </a></li>
-                        <li><a href="#"> TSHOP </a></li>
-                        <li><a href="#"> Party Dress </a></li>
-                        <li><a href="#"> Women Fragrances </a></li>
-                    </ul>
-                    <ul class="col-lg-2  col-sm-2 col-md-2  unstyled">
-                        <li>
-                            <p><strong> Men Collection </strong></p>
-                        </li>
-                        <li><a href="#"> Panjabi </a></li>
-                        <li><a href="#"> Male Fragrances </a></li>
-                        <li><a href="#"> Scarf </a></li>
-                        <li><a href="#"> Sandal </a></li>
-                        <li><a href="#"> Underwear </a></li>
-                        <li><a href="#"> Winter Collection </a></li>
-                        <li><a href="#"> Men Accessories </a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-<div class="nav navbar-nav navbar-right hidden-xs">
-    <div class="dropdown  cartMenu "><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i
-                class="fa fa-shopping-cart"> </i> <span class="cartRespons"> Cart ($210.00) </span> <b
-                class="caret"> </b> </a>
-
-        <div class="dropdown-menu col-lg-4 col-xs-12 col-md-4 ">
-            <div class="w100 miniCartTable scroll-pane">
-                <table>
-                    <tbody>
-                    <tr class="miniCartProduct">
-                        <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html">
-                                    <?php echo $this->Html->image('/images/product/3.jpg', array(
-                                        'alt' => 'img',
-                                    )); ?>
-                                </a></div>
-                        </td>
-                        <td style="width:40%">
-                            <div class="miniCartDescription">
-                                <h4><a href="product-details.html"> TSHOP Tshirt DO9 </a></h4>
-                                <span class="size"> 12 x 1.5 L </span>
-
-                                <div class="price"><span> $22 </span></div>
-                            </div>
-                        </td>
-                        <td style="width:10%" class="miniCartQuantity"><a> X 1 </a></td>
-                        <td style="width:15%" class="miniCartSubtotal"><span> $33 </span></td>
-                        <td style="width:5%" class="delete"><a> x </a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                        <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html">
-                                    <?php echo $this->Html->image('/images/product/2.jpg', array(
-                                        'alt' => 'img',
-                                    )); ?>
-                                </a></div>
-                        </td>
-                        <td style="width:40%">
-                            <div class="miniCartDescription">
-                                <h4><a href="product-details.html"> TShir TSHOP 09 </a></h4>
-                                <span class="size"> 12 x 1.5 L </span>
-
-                                <div class="price"><span> $15 </span></div>
-                            </div>
-                        </td>
-                        <td style="width:10%" class="miniCartQuantity"><a> X 1 </a></td>
-                        <td style="width:15%" class="miniCartSubtotal"><span> $120 </span></td>
-                        <td style="width:5%" class="delete"><a> x </a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                        <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html">
-                                    <?php echo $this->Html->image('/images/product/5.jpg', array(
-                                        'alt' => 'img',
-                                    )); ?>
-                                </a></div>
-                        </td>
-                        <td style="width:40%">
-                            <div class="miniCartDescription">
-                                <h4><a href="product-details.html"> Tshir 2014 </a></h4>
-                                <span class="size"> 12 x 1.5 L </span>
-
-                                <div class="price"><span> $30 </span></div>
-                            </div>
-                        </td>
-                        <td style="width:10%" class="miniCartQuantity"><a> X 1 </a></td>
-                        <td style="width:15%" class="miniCartSubtotal"><span> $80 </span></td>
-                        <td style="width:5%" class="delete"><a> x </a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                        <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html">
-                                    <?php echo $this->Html->image('/images/product/3.jpg', array(
-                                        'alt' => 'img',
-                                    )); ?>
-                                </a></div>
-                        </td>
-                        <td style="width:40%">
-                            <div class="miniCartDescription">
-                                <h4><a href="product-details.html"> TSHOP T shirt DO20 </a></h4>
-                                <span class="size"> 12 x 1.5 L </span>
-
-                                <div class="price"><span> $15 </span></div>
-                            </div>
-                        </td>
-                        <td style="width:10%" class="miniCartQuantity"><a> X 1 </a></td>
-                        <td style="width:15%" class="miniCartSubtotal"><span> $55 </span></td>
-                        <td style="width:5%" class="delete"><a> x </a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                        <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html">
-                                    <?php echo $this->Html->image('/images/product/4.jpg', array(
-                                        'alt' => 'img',
-                                    )); ?>
-                                </a></div>
-                        </td>
-                        <td style="width:40%">
-                            <div class="miniCartDescription">
-                                <h4><a href="product-details.html"> T shirt Black </a></h4>
-                                <span class="size"> 12 x 1.5 L </span>
-
-                                <div class="price"><span> $44 </span></div>
-                            </div>
-                        </td>
-                        <td style="width:10%" class="miniCartQuantity"><a> X 1 </a></td>
-                        <td style="width:15%" class="miniCartSubtotal"><span> $40 </span></td>
-                        <td style="width:5%" class="delete"><a> x </a></td>
-                    </tr>
-                    <tr class="miniCartProduct">
-                        <td style="width:20%" class="miniCartProductThumb">
-                            <div><a href="product-details.html">
-                                    <?php echo $this->Html->image('/images/site/winter.jpg', array(
-                                        'alt' => 'img',
-                                    )); ?>
-                                </a></div>
-                        </td>
-                        <td style="width:40%">
-                            <div class="miniCartDescription">
-                                <h4><a href="product-details.html"> G Star T shirt </a></h4>
-                                <span class="size"> 12 x 1.5 L </span>
-
-                                <div class="price"><span> $80 </span></div>
-                            </div>
-                        </td>
-                        <td style="width:10%" class="miniCartQuantity"><a> X 1 </a></td>
-                        <td style="width:15%" class="miniCartSubtotal"><span> $8.80 </span></td>
-                        <td style="width:5%" class="delete"><a> x </a></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="miniCartFooter text-right">
-                <h3 class="text-right subtotal"> Subtotal: $210 </h3>
-                <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VIEW CART </a> <a
-                    class="btn btn-sm btn-primary"> CHECKOUT </a></div>
-
-        </div>
-
-    </div>
-
-    <div class="search-box">
-        <div class="input-group">
-            <button class="btn btn-nobg getFullSearch" type="button"><i class="fa fa-search"> </i></button>
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="search-full text-right"><a class="pull-right search-close"> <i class=" fa fa-times-circle"> </i> </a>
-
-    <div class="searchInputBox pull-right">
-        <input type="search" data-searchurl="search?=" name="q" placeholder="start typing and hit enter to search"
-               class="search-input">
-        <button class="btn-nobg search-btn" type="submit"><i class="fa fa-search"> </i></button>
-    </div>
-</div>
-
-</div>
-</div>
-
-    <?php
-    echo $content_for_layout;
-    ?>
-
 <footer>
     <div class="footer">
         <div class="container">
@@ -773,6 +513,67 @@
     '/assets/js/script.js',
 ));
 ?>
+<script type="text/javascript">
+    (function(){
+        var productDetailsModal = $('#product-details-modal');
+        productDetailsModal.on('show.bs.modal', function (e) {
+            var productTitle, productPrice, productImage;
+            var clicked = $(e.relatedTarget),
+                quickView = clicked.parent('div.quickview');
+            productImage = quickView.next().children('img').attr('src');
+            productTitle = quickView.parent('div.image').siblings('div.description').children('h4').children('a').text();
+            productPrice = quickView.parent('div.image').siblings('div.price').find('span').eq(0).text();
+            productDetailsModal.find('a.product-largeimg-link').children('img').attr('src', productImage);
+            productDetailsModal.find('div.modal-details-inner').children('h1').text(productTitle);
+            productDetailsModal.find('div.modal-details-inner').find('div.product-price').find('span.price-sales').text(productPrice);
+
+        });
+        function add_product_to_cart(productId){
+            var productBox = $('div#prod-' + productId);
+            var cartBox = $('div.miniCartTable table');
+            cartBox.append('<tr class="miniCartProduct">');
+            console.log(cartBox);
+
+        }
+        //add product to cart.
+        $('div.action-control > a').on('click', function(e){
+            e.preventDefault();
+            var productId = $(this).parents('.item').attr('id');
+            productId = productId.replace( /^\D+/g, '');
+            add_product_to_cart(productId);
+            /*$.ajax({
+                url: "<?php echo Router::url('/shop/products/add_to_card/'); ?>" + productId,
+                success: function(msg){
+                    msg = JSON.parse(msg);
+                    console.log(msg);
+                    if (msg.status == 'success') {
+                        add_product_to_cart(productId);
+                    } else {
+
+                    }
+                }
+            });*/
+        });
+        $('tr.miniCartProduct td.delete a').on('click', function(e){
+            e.preventDefault();
+            var productId = '';
+            $.ajax({
+                type: "POST",
+                url: "<?php echo Router::url('/shop/products/remove_from_cart/'); ?>" + productId,
+                data: $('form.').serialize(),
+                success: function(msg){
+                    msg = JSON.parse(msg);
+                    if (msg.status == 'success') {
+                        var cartRow = $(this).parents('tr.miniCartProduct');
+                        cartRow.remove();
+                    } else {
+
+                    }
+                }
+            });
+        });
+    })();
+</script>
 <script type="text/javascript">
     /* <![CDATA[ */
     (function () {
