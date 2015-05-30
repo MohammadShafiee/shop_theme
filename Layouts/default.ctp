@@ -239,11 +239,9 @@
         ?>
     </div>
 </div>
-    <div class="container main-container">
-        <?php
-            echo $content_for_layout;
-        ?>
-    </div>
+    <?php
+        echo $content_for_layout;
+    ?>
     <div class="modal fade" id="product-details-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
