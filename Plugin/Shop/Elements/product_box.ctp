@@ -9,7 +9,7 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
         <div class="image">
             <div class="quickview">
                 <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> Quick View </a>
-            </div><a href="product-details.html">
+            </div><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>">
                 <?php echo $this->Html->image($product['Attachment'][0]['path'], array(
                     'class' => 'img-responsive',
                     'alt' => 'img',
@@ -18,7 +18,7 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
             <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
         </div>
         <div class="description">
-            <h4><a href="product-details.html"><?php echo $product['Product']['title']; ?></a></h4>
+            <h4><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>"><?php echo $product['Product']['title']; ?></a></h4>
             <p><?php echo $product['Product']['description']; ?></p>
             <span class="size"><?php echo $product['Product']['off'] ? ($product['Product']['off'] . ' % ' . __d('shop', 'off')) : '&nbsp;' ?></span>
         </div>
