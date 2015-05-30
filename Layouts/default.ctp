@@ -515,45 +515,25 @@
 ?>
 <script type="text/javascript">
     (function(){
-        var productDetailsModal = $('#product-details-modal');
-        productDetailsModal.on('show.bs.modal', function (e) {
-            var productTitle, productPrice, productImage;
-            var clicked = $(e.relatedTarget),
-                quickView = clicked.parent('div.quickview');
-            productImage = quickView.next().children('img').attr('src');
-            productTitle = quickView.parent('div.image').siblings('div.description').children('h4').children('a').text();
-            productPrice = quickView.parent('div.image').siblings('div.price').find('span').eq(0).text();
-            productDetailsModal.find('a.product-largeimg-link').children('img').attr('src', productImage);
-            productDetailsModal.find('div.modal-details-inner').children('h1').text(productTitle);
-            productDetailsModal.find('div.modal-details-inner').find('div.product-price').find('span.price-sales').text(productPrice);
-
-        });
-        function add_product_to_cart(productId){
-            var productBox = $('div#prod-' + productId);
-            var cartBox = $('div.miniCartTable table');
-            cartBox.append('<tr class="miniCartProduct">');
-            console.log(cartBox);
-
-        }
         //add product to cart.
-        $('div.action-control > a').on('click', function(e){
-            e.preventDefault();
-            var productId = $(this).parents('.item').attr('id');
-            productId = productId.replace( /^\D+/g, '');
-            add_product_to_cart(productId);
-            /*$.ajax({
-                url: "<?php echo Router::url('/shop/products/add_to_card/'); ?>" + productId,
-                success: function(msg){
-                    msg = JSON.parse(msg);
-                    console.log(msg);
-                    if (msg.status == 'success') {
-                        add_product_to_cart(productId);
-                    } else {
-
-                    }
-                }
-            });*/
-        });
+//        $('div.action-control > a').on('click', function(e){
+//            e.preventDefault();
+//            var productId = $(this).parents('.item').attr('id');
+//            productId = productId.replace( /^\D+/g, '');
+//            add_product_to_cart(productId);
+//            /*$.ajax({
+//                url: "<?php //echo Router::url('/shop/products/add_to_card/'); ?>//" + productId,
+//                success: function(msg){
+//                    msg = JSON.parse(msg);
+//                    console.log(msg);
+//                    if (msg.status == 'success') {
+//                        add_product_to_cart(productId);
+//                    } else {
+//
+//                    }
+//                }
+//            });*/
+//        });
         $('tr.miniCartProduct td.delete a').on('click', function(e){
             e.preventDefault();
             var productId = '';
