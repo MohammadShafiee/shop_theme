@@ -1,5 +1,5 @@
 <?php
-$selectOptions = Set::extract('{n}.id', $selectable['PropertyValue']);
+$selectOptions = Set::combine($selectable['PropertyValue'], '{n}.id', '{n}.option');
 echo $this->Form->input(
     'metas.'.$selectable['Property']['id'],
     array(
