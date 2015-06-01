@@ -1,4 +1,4 @@
 <?php
 foreach($productList as $product):
-    echo $this->element('product_box', compact('product'));
+    echo $this->element('Shop.product_box', compact('product'));
 endforeach;

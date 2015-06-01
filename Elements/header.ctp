@@ -1,5 +1,5 @@
-<?php echo $this->element('login_modal');?>
-<?php echo $this->element('register_modal');?>
+<?php //echo $this->element('login_modal');?>
+<?php //echo $this->element('register_modal');?>
 <div style="height: 100px; position: relative">
     <div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
         <?php echo $this->element('top_menu'); ?>
