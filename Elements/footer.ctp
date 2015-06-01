@@ -192,11 +192,12 @@ echo $this->fetch('bottomScript');
                     if (response.status == 'success') {
                         var itemCartQuantity = $('tr#item-' + productId).find('td.miniCartQuantity a');
                         var factureItemCount = itemCartQuantity.text();
-                        var itemCount = factureItemCount.replace( /\d+/g, '');
+                        var itemCount = factureItemCount.replace( /^\D+/g, '');
+                        itemCount = parseInt(itemCount);
                         if(--itemCount == 0){
                             $('tr#item-' + productId).remove();
                         }else{
-                            itemCartQuantity.text( factureItemCount.replace( /^\D+/g, itemCount ) );
+                            itemCartQuantity.text( factureItemCount.replace( /\d+/g, itemCount ) );
                         }
                     }
                 }
