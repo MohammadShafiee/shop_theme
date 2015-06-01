@@ -182,7 +182,7 @@ echo $this->fetch('bottomScript');
 </script>
 <script type="text/javascript">
     $(function(){
-        $("#remove-from-cart").on("click", function(){
+        $(".remove-from-cart").on("click", function(){
             var productId = $(this).parents('tr').attr('id');
             productId = productId.replace( /^\D+/g, '');
             $.ajax({

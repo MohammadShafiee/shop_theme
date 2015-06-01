@@ -33,7 +33,7 @@
                                 <td style="width:10%" class="miniCartQuantity"><a> X <?php echo $item['number']?> </a></td>
                                 <td style="width:15%" class="miniCartSubtotal"><span><?php echo $itemTotalPrice;?></span></td>
                                 <td style="width:5%" class="delete">
-                                    <a class="remove-from-cart" id="remove-from-cart"> x </a>
+                                    <a class="remove-from-cart"> x </a>
                                 </td>
                             </tr>
                         <?php
