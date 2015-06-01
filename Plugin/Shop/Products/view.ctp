@@ -1,9 +1,7 @@
 <script type="text/javascript">
     function productAddToCartForm(productId){
         $.ajax({
-            url: "<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'products', 'action' => 'add_to_card')); ?>/" + productId,
-            data: $('form').serialize(),
-            type: 'POST',
+            url: "<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'products', 'action' => 'add_to_cart')); ?>/" + productId,
             success: function(response){
                 response = JSON.parse(response);
                  if (response.status == 'success') {

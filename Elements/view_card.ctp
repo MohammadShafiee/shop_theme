@@ -10,30 +10,34 @@
                 <table>
                     <tbody>
                     <?php
-                    foreach($this->Session->read('pay.facture.FactureItem') as $item){
-                        $itemTotalPrice = number_format($item['price'] * $item['number']);
-                    ?>
-                        <tr class="miniCartProduct">
-                            <td style="width:20%" class="miniCartProductThumb">
-                                <div>
-                                    <a href="product-details.html">
-                                        <?php echo $this->Html->image('/images/site/winter.jpg', array(
-                                            'alt' => 'img',
-                                        )); ?>
-                                    </a>
-                                </div>
-                            </td>
-                            <td style="width:40%">
-                                <div class="miniCartDescription">
-                                    <h4><a href="product-details.html"><?php echo $item['title']?></a></h4>
-                                    <div class="price"><span> <?php echo number_format($item['price'])?> </span></div>
-                                </div>
-                            </td>
-                            <td style="width:10%" class="miniCartQuantity"><a> X <?php echo $item['number']?> </a></td>
-                            <td style="width:15%" class="miniCartSubtotal"><span><?php echo $itemTotalPrice;?></span></td>
-                            <td style="width:5%" class="delete"><a> x </a></td>
-                        </tr>
-                    <?php
+                    if($this->Session->check("pay.facture.FactureItem")){
+                        foreach($this->Session->read('pay.facture.FactureItem') as $item){
+                            $itemTotalPrice = number_format($item['price'] * $item['number']);
+                            ?>
+                            <tr class="miniCartProduct" id="item-<?php echo $item['foreign_key']; ?>">
+                                <td style="width:20%" class="miniCartProductThumb">
+                                    <div>
+                                        <a href="product-details.html">
+                                            <?php echo $this->Html->image('/images/site/winter.jpg', array(
+                                                'alt' => 'img',
+                                            )); ?>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td style="width:40%">
+                                    <div class="miniCartDescription">
+                                        <h4><a href="product-details.html"><?php echo $item['title']?></a></h4>
+                                        <div class="price"><span> <?php echo number_format($item['price'])?> </span></div>
+                                    </div>
+                                </td>
+                                <td style="width:10%" class="miniCartQuantity"><a> X <?php echo $item['number']?> </a></td>
+                                <td style="width:15%" class="miniCartSubtotal"><span><?php echo $itemTotalPrice;?></span></td>
+                                <td style="width:5%" class="delete">
+                                    <a class="remove-from-cart" id="remove-from-cart"> x </a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
                     }
                     ?>
                     </tbody>

@@ -150,47 +150,6 @@ echo $this->Html->script(array(
 echo $this->fetch('bottomScript');
 ?>
 <script type="text/javascript">
-    (function(){
-        //add product to cart.
-//        $('div.action-control > a').on('click', function(e){
-//            e.preventDefault();
-//            var productId = $(this).parents('.item').attr('id');
-//            productId = productId.replace( /^\D+/g, '');
-//            add_product_to_cart(productId);
-//            /*$.ajax({
-//                url: "<?php //echo Router::url('/shop/products/add_to_card/'); ?>//" + productId,
-//                success: function(msg){
-//                    msg = JSON.parse(msg);
-//                    console.log(msg);
-//                    if (msg.status == 'success') {
-//                        add_product_to_cart(productId);
-//                    } else {
-//
-//                    }
-//                }
-//            });*/
-//        });
-        $('tr.miniCartProduct td.delete a').on('click', function(e){
-            e.preventDefault();
-            var productId = '';
-            $.ajax({
-                type: "POST",
-                url: "<?php echo Router::url('/shop/products/remove_from_cart/'); ?>" + productId,
-                data: $('form.').serialize(),
-                success: function(msg){
-                    msg = JSON.parse(msg);
-                    if (msg.status == 'success') {
-                        var cartRow = $(this).parents('tr.miniCartProduct');
-                        cartRow.remove();
-                    } else {
-
-                    }
-                }
-            });
-        });
-    })();
-</script>
-<script type="text/javascript">
     /* <![CDATA[ */
     (function () {
         try {
@@ -220,4 +179,28 @@ echo $this->fetch('bottomScript');
         }
     })();
     /* ]]> */
+</script>
+<script type="text/javascript">
+    $(function(){
+        $("#remove-from-cart").on("click", function(){
+            var productId = $(this).parents('tr').attr('id');
+            productId = productId.replace( /^\D+/g, '');
+            $.ajax({
+                url: "<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'products', 'action' => 'remove_from_cart')); ?>/" + productId,
+                success: function(response){
+                    response = JSON.parse(response);
+                    if (response.status == 'success') {
+                        var itemCartQuantity = $('tr#item-' + productId).find('td.miniCartQuantity a');
+                        var factureItemCount = itemCartQuantity.text();
+                        var itemCount = factureItemCount.replace( /\d+/g, '');
+                        if(--itemCount == 0){
+                            $('tr#item-' + productId).remove();
+                        }else{
+                            itemCartQuantity.text( factureItemCount.replace( /^\D+/g, itemCount ) );
+                        }
+                    }
+                }
+            });
+        });
+    });
 </script>
