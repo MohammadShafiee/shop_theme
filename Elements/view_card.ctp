@@ -54,9 +54,8 @@
             </div>
 
             <div class="miniCartFooter text-right">
-                <h3 class="text-right subtotal"> Subtotal: <?php echo number_format($totalPrice); ?> </h3>
-                <a class="btn btn-sm btn-danger"> <i class="fa fa-shopping-cart"> </i> VIEW CART </a> <a
-                    class="btn btn-sm btn-primary"> CHECKOUT </a></div>
+                <h3 class="text-right subtotal"> <span>مجموع</span>: <?php echo number_format($totalPrice); ?> </h3>
+                <a class="btn btn-sm btn-primary"> پرداخت </a></div>
 
         </div>
 
