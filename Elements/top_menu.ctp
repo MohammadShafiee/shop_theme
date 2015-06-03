@@ -4,12 +4,6 @@
             <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
                 <div class="pull-left ">
                     <ul class="userMenu ">
-                        <li>
-                            <a href="#">
-                                <span class="hidden-xs">HELP</span>
-                                <i class="glyphicon glyphicon-info-sign hide visible-xs "></i>
-                            </a>
-                        </li>
                         <li class="phone-number">
                             <a href="callto:+88016000000">
                                 <span> <i class="glyphicon glyphicon-phone-alt "></i></span>
@@ -23,10 +17,21 @@
                 <div class="pull-right">
                     <ul class="userMenu">
                         <li>
-                            <a href="account-1.html">
-                                <span class="hidden-xs"> My Account</span>
-                                <i class="glyphicon glyphicon-user hide visible-xs "></i>
-                            </a>
+                            <?php
+                            echo $this->Html->link(
+                                '<span class="hidden-xs">'.__d('shop', 'My Profile').'</span>
+                                    <i class="glyphicon glyphicon-user hide visible-xs"></i>',
+                                array(
+                                    'plugin' => 'users',
+                                    'controller' => 'users',
+                                    'action' => 'view',
+                                    $this->Session->read('Auth.User.username')
+                                ),
+                                array(
+                                    'escape' => false
+                                )
+                            );
+                            ?>
                         </li>
                         <?php
                         if($this->Session->read('Auth.User')){
