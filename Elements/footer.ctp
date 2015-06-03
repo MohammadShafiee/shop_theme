@@ -130,10 +130,6 @@
 </footer>
 <?php
 echo $this->Html->script(array(
-    'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js',
-    '/assets/bootstrap/js/bootstrap.min.js',
-));
-echo $this->Html->script(array(
     '/assets/js/jquery.cycle2.min.js',
     '/assets/js/jquery.easing.1.3.js',
     '/assets/js/jquery.parallax-1.1.js',

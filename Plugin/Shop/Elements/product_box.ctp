@@ -7,15 +7,12 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
             <i class="glyphicon glyphicon-heart"></i>
         </a>
         <div class="image">
-            <div class="quickview">
-                <a title="Quick View" class="btn btn-xs  btn-quickview" data-target="#product-details-modal" data-toggle="modal"> Quick View </a>
-            </div><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>">
+            <a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>">
                 <?php echo $this->Html->image($product['Attachment'][0]['path'], array(
                     'class' => 'img-responsive',
                     'alt' => 'img',
                 )); ?>
             </a>
-            <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
         </div>
         <div class="description">
             <h4><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>"><?php echo $product['Product']['title']; ?></a></h4>
@@ -26,6 +23,6 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
             <span><?php echo number_format($offPrice); ?></span>
             <span class="old-price"><?php echo $product['Product']['off'] ? number_format($product['Product']['price']) : '&nbsp;'; ?></span>
         </div>
-        <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
+        <div class="action-control"> <a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>" class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> <span>افزودن به سبد خرید</span> </span> </a> </div>
     </div>
 </div>

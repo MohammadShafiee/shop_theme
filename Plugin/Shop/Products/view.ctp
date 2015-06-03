@@ -61,6 +61,7 @@ $this->end();
             <div class="details-description">
                 <p><?php echo $product['Product']['description']; ?></p>
             </div>
+            <?php if(!empty($product['SelectableProperties'])): ?>
             <div class="productFilter productFilterLook2">
                 <div class="filterBox">
                     <?php
@@ -70,6 +71,7 @@ $this->end();
                     ?>
                 </div>
             </div>
+            <?php endif; ?>
             <div class="cart-actions">
                 <div class="addto">
                     <button onclick="javascript:productAddToCartForm(<?php echo $product['Product']['id']?>);" class="button btn-cart cart first" title="Add to Cart" type="button">افزودن به سبد خرید</button>

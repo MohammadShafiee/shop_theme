@@ -6,7 +6,6 @@
                     <ul class="userMenu ">
                         <li>
                             <a href="#">
-                                <span class="hidden-xs">HELP</span>
                                 <i class="glyphicon glyphicon-info-sign hide visible-xs "></i>
                             </a>
                         </li>

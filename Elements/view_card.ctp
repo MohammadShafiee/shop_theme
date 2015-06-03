@@ -11,7 +11,7 @@
                     }
                 }
             ?>
-            <span class="cartRespons"> Cart (<?php echo number_format($totalPrice); ?>) </span>
+            <span class="cartRespons"> <span style="display: inline-block;">سبد خرید</span> (<?php echo number_format($totalPrice); ?>) </span>
             <b class="caret"> </b>
         </a>
         <div class="dropdown-menu col-lg-4 col-xs-12 col-md-4 ">
