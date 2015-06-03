@@ -1759,7 +1759,6 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 }
 
 .banner {
-    margin-top: 80px;
     -webkit-transition: all 0.1s ease-out 0s;
     -moz-transition: all 0.1s ease-out 0s;
     -ms-transition: all 0.1s ease-out 0s;
