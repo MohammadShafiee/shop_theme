@@ -10,12 +10,7 @@
             foreach($paths as $path){
                 ?>
                 <li>
-                    <?php echo $this->Html->link($path['title'], array(
-                        'plugin' => 'shop',
-                        'controller' => 'categories',
-                        'action' => 'index',
-                        $path['id']
-                    ));
+                    <?php echo $this->Html->link($path['title'], "/shop/category/" . $path['id']);
                     ?>
                 </li>
             <?php

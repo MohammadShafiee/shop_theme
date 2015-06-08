@@ -195,7 +195,7 @@ class CustomHelper extends Helper {
             if($category['Category']['parent_id'] == null){
                 $menu_item = true;
                 $output .= "<li class='dropdown megamenu-80width'>";
-                $output .= "<a data-toggle='dropdown' class='dropdown-toggle' href='#'>".
+                $output .= "<a href='" . Router::url('/') . "shop/category/" . $category['Category']['id'] . "' data-toggle='dropdown' class='dropdown-toggle'>".
                               $category['Category']['title'] . " <b class='caret'> </b> ".
                          "</a>";
             }
@@ -205,10 +205,16 @@ class CustomHelper extends Helper {
                 foreach($category['children'] as $children){
                     $output .= '<ul class="col-lg-2  col-sm-2 col-md-2  unstyled noMarginLeft">
                               <li>
-                                  <p><strong> ' . $children['Category']['title'] . ' </strong></p>
+                                  <a href="'.
+                                            Router::url("/") . "shop/category/" . $children['Category']['id']
+                                            .'">
+                                        <p><strong> ' . $children['Category']['title'] . ' </strong></p>
+                                  </a>
                               </li>';
                         foreach($children['children'] as $subChildren){
-                            $output .= '<li><a href="#"> '. $subChildren['Category']['title'] .' </a></li>';
+                            $output .= '<li><a href="'.
+                                Router::url("/") . "shop/category/" . $subChildren['Category']['id'] .
+                                '"> '. $subChildren['Category']['title'] .' </a></li>';
                         }
                     $output .= '</ul>';
                 }
@@ -219,6 +225,30 @@ class CustomHelper extends Helper {
                 $output .= "</li>";
                 $menu_item = false;
             }
+        }
+        return $output;
+    }
+
+    public function showSidebarCategories($categories, $depth = 0){
+        $output = '';
+        if($depth == 0){
+            $output = '<ul class="nav nav-pills nav-stacked tree">';
+        }
+        $output .= '<li class="active dropdown-tree open-tree">';
+            $output .= '<a class="dropdown-tree-a">
+                                <span class="badge pull-right">42</span>
+                                '. $categories['Category']['title'] .'
+                        </a>        ';
+            if(!empty($categories['children'])){
+                $output .= '<ul class="category-level-2 dropdown-menu-tree">';
+                foreach($categories['children'] as $child){
+                    $output .= $this->showSidebarCategories($child, $depth + 1);
+                }
+                $output .= '</ul>';
+            }
+        $output .= '</li>';
+        if($depth == 0){
+            $output .= '</ul>';
         }
         return $output;
     }

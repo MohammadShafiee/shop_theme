@@ -3342,6 +3342,7 @@ h5.parallaxSubtitle {
 .breadcrumb {
     border: 1px solid #DDDDDD;
     background: none;
+    margin-top: 20px;
 }
 
 .main-container {
