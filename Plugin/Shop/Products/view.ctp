@@ -36,17 +36,19 @@ $this->end();
             <div class="main-image sp-wrap col-lg-12 no-padding" style="display: inline-block;">
                 <?php foreach($product['Attachment'] as $attachment): ?>
                     <?php
-                    echo $this->Html->link(
-                        $this->Html->image($attachment['path'], array(
-                            'class' => 'img-responsive',
-                            'alt' => 'img',
-                        )),
-                        $attachment['path'],
-                        array(
-                            'escape' => false,
-                            'class' => 'sp-current'
-                        )
-                    );
+                    if(is_array($attachment)){
+                        echo $this->Html->link(
+                            $this->Html->image($attachment['path'], array(
+                                'class' => 'img-responsive',
+                                'alt' => 'img',
+                            )),
+                            $attachment['path'],
+                            array(
+                                'escape' => false,
+                                'class' => 'sp-current'
+                            )
+                        );
+                    }
                     ?>
                 <?php endforeach; ?>
             </div>
@@ -83,5 +85,4 @@ $this->end();
             <div style="clear:both"></div>
         </div>
     </div>
-    <?php echo $this->Layout->blocks('index_product_center');?>
 </div>

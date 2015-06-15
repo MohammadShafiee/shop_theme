@@ -1,0 +1,1 @@
+<?php echo $this->Form->radio('paymentPlugin', $onlineList, array('legend' => false));

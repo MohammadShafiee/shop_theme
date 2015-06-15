@@ -55,7 +55,13 @@
 
             <div class="miniCartFooter text-right">
                 <h3 class="text-right subtotal"> <span>مجموع</span>: <?php echo number_format($totalPrice); ?> </h3>
-                <a class="btn btn-sm btn-primary"> پرداخت </a></div>
+                <?php
+                echo $this->Html->link('پرداخت', Router::url('/payment/payments/pay', true), array(
+                        'class' => 'btn btn-sm btn-primary',
+                    )
+                );
+                ?>
+            </div>
 
         </div>
 

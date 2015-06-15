@@ -7,12 +7,24 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
             <i class="glyphicon glyphicon-heart"></i>
         </a>
         <div class="image">
-            <a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>">
-                <?php echo $this->Html->image($product['Attachment'][0]['path'], array(
-                    'class' => 'img-responsive',
-                    'alt' => 'img',
-                )); ?>
-            </a>
+            <?php
+            $imagePath = '';
+            if(!empty($product['Attachment']['path'])){
+                $imagePath = $product['Attachment']['path'];
+            }elseif(isset($product['Attachment'][0]['path'])){
+                $imagePath = $product['Attachment'][0]['path'];
+            }
+            if(!empty($imagePath)) {
+                ?>
+                <a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>">
+                    <?php echo $this->Html->image($imagePath, array(
+                        'class' => 'img-responsive',
+                        'alt' => 'img',
+                    )); ?>
+                </a>
+            <?php
+            }
+            ?>
         </div>
         <div class="description">
             <h4><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>"><?php echo $product['Product']['title']; ?></a></h4>
