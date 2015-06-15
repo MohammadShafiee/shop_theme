@@ -7,35 +7,6 @@
         '/assets/bootstrap/js/bootstrap.min.js',
     ));
     ?>
-    <script type="text/javascript">
-        //<![CDATA[
-        try {
-            if (!window.CloudFlare) {
-                var CloudFlare = [{
-                    verbose: 0,
-                    p: 0,
-                    byc: 0,
-                    owlid: "cf",
-                    bag2: 1,
-                    mirage2: 0,
-                    oracle: 0,
-                    paths: {cloudflare: "/cdn-cgi/nexp/dok3v=1613a3a185/"},
-                    atok: "7e7ee3eb6d68fdd16081c57cd1f9ad29",
-                    petok: "bb0794d281bb59993a9b78b284a55d4438c1bc5f-1431455423-1800",
-                    zone: "templatecycle.com",
-                    rocket: "0",
-                    apps: {}
-                }];
-                CloudFlare.push({"apps": {"ape": "3a6373ca545007d271be322636d225e3"}});
-                !function (a, b) {
-                    a = document.createElement("script"), b = document.getElementsByTagName("script")[0], a.async = !0, a.src = "//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=7e13c32551/cloudflare.min.js", b.parentNode.insertBefore(a, b)
-                }()
-            }
-        } catch (e) {
-        }
-        ;
-        //]]>
-    </script>
     <!--    <link rel="shortcut icon" href="/assets/ico/favicon.png">-->
     <title><?php echo $title_for_layout; ?> &raquo; <?php echo Configure::read('Site.title'); ?></title>
 

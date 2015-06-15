@@ -17,9 +17,7 @@ $this->request->data['User'] = $user['User'];
                 <div class="col-xs-12 col-sm-6">
                     <h2 class="block-title-2"> <?php echo __d('shop', 'My Profile Information');?> </h2>
                     <?php
-                    echo $this->Form->create('User', array(
-                        'url' => array('plugin' => 'users', 'controller' => 'users', 'action' => 'edit')
-                    ), array(
+                    echo $this->Form->create('User', array(), array(
                         'role' => 'form',
                         'class' => 'regForm',
                         'novalidation' => 'novalidate'
@@ -30,7 +28,8 @@ $this->request->data['User'] = $user['User'];
                                 'class' => 'form-group'
                             ),
                             'label' => __d('croogo', 'Username'),
-                            'class' => 'form-control'
+                            'class' => 'form-control',
+                            'disabled' => 'disabled'
                         ));
                     echo $this->Form->input('password',
                         array(
