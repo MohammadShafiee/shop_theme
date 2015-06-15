@@ -59,7 +59,7 @@ $this->end();
 <!--            <div class="rating">-->
 <!--                <p> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star-o "></i></span> <span class="ratingInfo"> <span> / </span> <a data-target="#modal-review" data-toggle="modal"> Write a review</a> </span></p>-->
 <!--            </div>-->
-            <div class="product-price"> <span class="price-sales"> <?php echo number_format($product['Product']['price']); ?></span> <span class="price-standard"><?php echo $offPrice; ?></span> </div>
+            <div class="product-price"> <span class="price-sales"> <?php echo $offPrice; ?></span> <span class="price-standard"><?php echo number_format($product['Product']['price']); ?></span> </div>
             <div class="details-description">
                 <p><?php echo $product['Product']['description']; ?></p>
             </div>

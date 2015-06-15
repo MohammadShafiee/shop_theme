@@ -11,5 +11,6 @@
     ?>
     <div class="row">
         <?php echo $this->element('categories_tree_panel'); ?>
+        <?php echo $this->Layout->blocks('category_group_products');?>
     </div>
 </div>
