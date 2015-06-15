@@ -56,10 +56,10 @@ $this->end();
         <div class="col-lg-6 col-md-6 col-sm-5">
             <?php echo $this->Form->create(null, array('action' => 'add_to_card'));?>
             <h1 class="product-title"> <?php echo $product['Product']['title']; ?></h1>
-<!--            <div class="rating">-->
-<!--                <p> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i></span> <span><i class="fa fa-star-o "></i></span> <span class="ratingInfo"> <span> / </span> <a data-target="#modal-review" data-toggle="modal"> Write a review</a> </span></p>-->
-<!--            </div>-->
-            <div class="product-price"> <span class="price-sales"> <?php echo $offPrice; ?></span> <span class="price-standard"><?php echo number_format($product['Product']['price']); ?></span> </div>
+            <div class="product-price">
+                <span class="price-sales"> <?php echo number_format($offPrice); ?></span>
+                <span class="price-standard"><?php echo ($offPrice != $product['Product']['price']) ? number_format($product['Product']['price']) : ''; ?></span>
+            </div>
             <div class="details-description">
                 <p><?php echo $product['Product']['description']; ?></p>
             </div>
