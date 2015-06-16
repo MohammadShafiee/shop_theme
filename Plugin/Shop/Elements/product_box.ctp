@@ -22,6 +22,14 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
                 </a>
             <?php
             }
+            if($product['Product']['off']) {
+                ?>
+                <div class="promotion">
+                        <span
+                            class="discount"><?php echo $product['Product']['off'] ? ($product['Product']['off'] . ' % ' . __d('shop', 'OFF')) : '&nbsp;' ?></span>
+                </div>
+            <?php
+            }
             ?>
         </div>
         <div class="description">
