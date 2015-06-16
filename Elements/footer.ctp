@@ -59,10 +59,8 @@ echo $this->fetch('bottomScript');
         $(".remove-from-cart").on("click", function(){
             var productId = $(this).parents('tr').attr('id');
             productId = productId.replace( /^\D+/g, '');
-            $.ajax({
-                url: "<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'products', 'action' => 'remove_from_cart')); ?>/" + productId,
-                success: function(response){
-                    response = JSON.parse(response);
+            function callback(response){
+                if(response.status !== 'error'){
                     if (response.status == 'success') {
                         var itemCartQuantity = $('tr#item-' + productId).find('td.miniCartQuantity a');
                         var factureItemCount = itemCartQuantity.text();
@@ -87,7 +85,8 @@ echo $this->fetch('bottomScript');
                         spanItemTotalPrice.text(formatCurrency(response.product.itemTotalPrice));
                     }
                 }
-            });
+            }
+            productRemoveFromCart(productId, true, false, callback);
         });
     });
 </script>

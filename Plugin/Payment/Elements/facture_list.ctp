@@ -53,18 +53,18 @@
                             </div>
                         </td>
                         <td class="delete">
-                            <a title="Delete">
+                            <a title="Delete" onclick="productRemoveFromCart(<?php echo $item['foreign_key']?>, true, true)" class="force-delete">
                                 <i class="glyphicon glyphicon-trash fa-2x"></i>
                             </a>
                         </td>
                         <td>
                             <div class="input-group bootstrap-touchspin">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-link bootstrap-touchspin-down" type="button">-</button>
+                                    <button class="btn btn-link bootstrap-touchspin-down" type="button" onclick="productRemoveFromCart(<?php echo $item['foreign_key']?>)">-</button>
                                 </span>
                                 <div class="quanitySniper form-control" style="color: gray; line-height: 30px"><?php echo number_format($item['number']);?></div>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-link bootstrap-touchspin-up" type="button">+</button>
+                                    <button class="btn btn-link bootstrap-touchspin-up" type="button" onclick="productAddToCartForm(<?php echo $item['foreign_key']?>)">+</button>
                                 </span>
                             </div>
                         </td>

@@ -287,7 +287,7 @@ h3 code {
 }
 
 .globalPadding {
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 .globalPaddingTop {
@@ -2616,7 +2616,7 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 
 #productslider .item,
 .owl-carousel .item{
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 .item {
