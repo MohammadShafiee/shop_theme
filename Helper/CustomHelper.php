@@ -235,8 +235,7 @@ class CustomHelper extends Helper {
             $output = '<ul class="nav nav-pills nav-stacked tree">';
         }
         $output .= '<li class="active dropdown-tree open-tree">';
-            $output .= '<a class="dropdown-tree-a">
-                                <span class="badge pull-right">42</span>
+            $output .= '<a href="' . Router::url("/") . "shop/category/" . $categories['Category']['id'] . '">
                                 '. $categories['Category']['title'] .'
                         </a>        ';
             if(!empty($categories['children'])){
