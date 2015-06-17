@@ -1,14 +1,18 @@
 <?php
 $block = $block['Block'];
+if(isset(${'parallaxImageUrl_'.$block['alias']})) {
 ?>
-<style>
-    .parallax-image{
-        background: url(<?php echo $parallaxImageUrl?>) fixed;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-</style>
-<div class="parallax-section parallax-image" >
+    <style>
+        .parallax-image-<?php echo str_replace('_','-',$block['alias'])?> {
+            background: url(<?php echo ${'parallaxImageUrl_'.$block['alias']}?>) fixed;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+<?php
+}
+?>
+<div class="parallax-section parallax-image-<?php echo str_replace('_','-',$block['alias'])?>" >
     <div class="w100 parallax-section-overley">
         <div class="container">
             <div class="row">
@@ -20,12 +24,8 @@ $block = $block['Block'];
                             <h1 class="xlarge"> <?php echo $block['title'];?> </h1>
                         <?php
                         }
+                        echo $this->Layout->filter($block['body']);
                         ?>
-                        <h5 class="parallaxSubtitle">
-                            <?php
-                            echo $this->Layout->filter($block['body']);
-                            ?>
-                        </h5>
                     </div>
                 </div>
             </div>
