@@ -3504,8 +3504,8 @@ h5.parallaxSubtitle {
 
 .categoryFooter {
     border-top: solid 1px #eee;
-    padding-top: 20px;
-    margin-top: -20px;
+    /*padding-top: 20px;
+    margin-top: -20px;*/
 }
 
 .nav-stacked > li {
