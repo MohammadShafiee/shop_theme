@@ -8,8 +8,10 @@
     ?>
     <div class="row">
         <?php echo $this->element('categories_tree_panel'); ?>
-        <!--Echo element latest products ( carrousel )-->
-        <!--Echo element best selling products ( carrousel )-->
+        <div class="col-lg-9 col-md-9 col-sm-12">
+            <!--Echo element latest products ( carrousel )-->
+            <!--Echo element best selling products ( carrousel )-->
+        </div>
 <!--        --><?php //echo $this->Layout->blocks('category_page');?>
     </div>
 </div>
