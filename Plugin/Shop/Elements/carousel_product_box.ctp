@@ -4,11 +4,6 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
 <div class="owl-item" style="width: 293px;">
     <div class="item">
         <div class="product">
-            <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
-               data-placement="left">
-                <i class="glyphicon glyphicon-heart"></i>
-            </a>
-
             <div class="image">
                 <?php
                 $imagePath = '';
