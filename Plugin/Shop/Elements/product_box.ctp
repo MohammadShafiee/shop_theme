@@ -31,7 +31,6 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
         </div>
         <div class="description">
             <h4><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>"><?php echo $product['Product']['title']; ?></a></h4>
-            <p><?php echo $product['Product']['description']; ?></p>
             <span class="size"><?php echo $product['Product']['off'] ? ($product['Product']['off'] . ' % ' . __d('shop', 'off')) : '&nbsp;' ?></span>
         </div>
         <div class="price">
