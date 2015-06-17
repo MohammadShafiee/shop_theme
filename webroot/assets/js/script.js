@@ -1,4 +1,4 @@
-$(document).ready(function(){$("#productslider").owlCarousel({navigation:true,items:4,itemsTablet:[768,2]});var owl=$(".brand-carousel");owl.owlCarousel({navigation:false,pagination:false,items:8,itemsTablet:[768,4],itemsMobile:[400,2]});$("#nextBrand").click(function(){owl.trigger('owl.next');})
+$(document).ready(function(){$(".owl-carousel").owlCarousel({navigation:true,items:4,itemsTablet:[768,2]});var owl=$(".brand-carousel");owl.owlCarousel({navigation:false,pagination:false,items:8,itemsTablet:[768,4],itemsMobile:[400,2]});$("#nextBrand").click(function(){owl.trigger('owl.next');})
 $("#prevBrand").click(function(){owl.trigger('owl.prev');})
 $("#SimilarProductSlider").owlCarousel({navigation:true});var pshowcase=$("#productShowCase");pshowcase.owlCarousel({autoPlay:4000,stopOnHover:true,navigation:false,paginationSpeed:1000,goToFirstSpeed:2000,singleItem:true,autoHeight:true});$("#ps-next").click(function(){pshowcase.trigger('owl.next');})
 $("#ps-prev").click(function(){pshowcase.trigger('owl.prev');})
