@@ -1,9 +1,3 @@
-<style>
-    .item .image img {
-        min-width: inherit;
-        min-height: inherit;
-    }
-</style>
 <div class="container main-container">
     <?php
     echo $this->element('product_bread_crumb', array(

@@ -1,3 +1,7 @@
+<?php
+    $minPrice = !empty($minPrice) ? $minPrice : '';
+    $maxPrice = !empty($maxPrice) ? $maxPrice : '';
+?>
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
@@ -11,17 +15,17 @@
         <div class="panel-body priceFilterBody">
             <p><?php echo __d('shop', 'Enter a Price range '); ?></p>
             <?php echo $this->Form->create('Category', array(
-                'type' => 'POST',
+                'type' => 'GET',
                 'class' => 'form-inline ',
             ));
             echo $this->Html->div('form-group',
-                '<input type="text" class="form-control" name="minPrice" id="minPrice" placeholder="1000">'
+                '<input type="text" class="form-control" name="minPrice" value="' .$minPrice. '" id="minPrice" placeholder="'.__d('shop', 'From').'">'
             );
             ?>
             <div class="form-group sp"> - </div>
             <?php
             echo $this->Html->div('form-group',
-                '<input type="text" class="form-control" name="maxPrice" id="maxPrice" placeholder="100000">'
+                '<input type="text" class="form-control" name="maxPrice" value="'. $maxPrice .'" id="maxPrice" placeholder="' . __d('shop', 'To') . '">'
             );?>
             <input type="submit" class="btn btn-default pull-right" value="<?php echo __d('shop', 'check'); ?>">
             <?php echo $this->Form->end(); ?>

@@ -2630,10 +2630,6 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
     margin-bottom: 15px;
     /*height: 480px;*/
 }
-.item .image img{
-    min-width: 240px;
-    min-height: 240px;
-}
 #SimilarProductSlider .item {
     height: auto !important;
 }

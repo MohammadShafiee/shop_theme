@@ -1,9 +1,3 @@
-<style>
-    .item .image img {
-        min-width: inherit;
-        min-height: inherit;
-    }
-</style>
 <div class="container main-container">
     <?php
     echo $this->element('product_bread_crumb', array(
@@ -14,7 +8,6 @@
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12">
             <div class="panel-group" id="accordionNo">
-                <?php echo $this->element('categories_tree_panel'); ?>
                 <?php echo $this->element('categories_searchable_properties', compact('categoryProperties')); ?>
             </div>
         </div>
