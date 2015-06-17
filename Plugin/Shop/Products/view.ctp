@@ -1,18 +1,3 @@
-<script type="text/javascript">
-    function productAddToCartForm(productId){
-        $.ajax({
-            url: "<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'products', 'action' => 'add_to_cart')); ?>/" + productId,
-            success: function(response){
-                response = JSON.parse(response);
-                 if (response.status == 'success') {
-                     window.location.reload();
-                 } else {
-
-                 }
-             }
-         });
-    }
-</script>
 <?php
 $this->append('bottomScript');
     echo $this->Html->script('/assets/js/smoothproducts.min.js');

@@ -31,6 +31,7 @@
     ?>
     <![endif]-->
     <script>
+        var webroot = '<?php echo $this->request->webroot;?>';
         paceOptions = {
             elements: true
         };
