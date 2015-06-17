@@ -6,7 +6,12 @@
     ));
     ?>
     <div class="row">
-        <?php echo $this->element('categories_tree_panel'); ?>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="panel-group" id="accordionNo">
+                <?php echo $this->element('categories_tree_panel'); ?>
+                <?php echo $this->element('categories_searchable_properties', compact('categoryProperties')); ?>
+            </div>
+        </div>
         <div class="col-lg-9 col-md-9 col-sm-12">
             <?php echo $this->Layout->blocks('category_top_slider');?>
             <?php echo $this->element('category_products_list'); ?>
