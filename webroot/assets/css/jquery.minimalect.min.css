@@ -184,7 +184,9 @@
     margin-bottom: 10px;
     max-height: 40px;
     max-width: 100%;
-    width: 100%;
+    width: 90%;
+    margin-right: 5px;
+    float: left !important;
 
 }
 

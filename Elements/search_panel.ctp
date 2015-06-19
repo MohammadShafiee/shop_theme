@@ -3,7 +3,7 @@
         <i class=" fa fa-times-circle"></i>
     </a>
     <div class="searchInputBox pull-right">
-        <input type="search" data-searchurl="search?=" name="q" placeholder="start typing and hit enter to search"
+        <input type="search" data-searchurl="search?=" name="q" placeholder="نام گروه، برند و یا کالای مورد جستجو را وارد کنید"
                class="search-input">
         <button class="btn-nobg search-btn" type="submit"><i class="fa fa-search"> </i></button>
     </div>

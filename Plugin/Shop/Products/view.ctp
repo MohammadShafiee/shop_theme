@@ -23,16 +23,16 @@ $this->end();
                     <?php
                     if(is_array($attachment)){
                         echo $this->Html->link(
-                            $this->Html->image($attachment['path'], array(
-                                'class' => 'img-responsive',
-                                'alt' => 'img',
-                            )),
-                            $attachment['path'],
-                            array(
-                                'escape' => false,
-                                'class' => 'sp-current'
-                            )
-                        );
+                                $this->Html->image($attachment['path'], array(
+                                    'class' => 'img-responsive',
+                                    'alt' => 'img',
+                                )),
+                                $attachment['path'],
+                                array(
+                                    'escape' => false,
+                                    'class' => 'sp-current'
+                                )
+                            );
                     }
                     ?>
                 <?php endforeach; ?>
@@ -50,7 +50,7 @@ $this->end();
             </div>
             <?php if(!empty($product['SelectableProperties'])): ?>
             <div class="productFilter productFilterLook2">
-                <div class="filterBox">
+                <div class="filterBox clearfix" style="width: 100%;">
                     <?php
                     foreach($product['SelectableProperties'] as $selectable){
                         echo $this->element('selectable_select', compact('selectable'));

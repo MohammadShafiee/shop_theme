@@ -1,8 +1,8 @@
 <?php
 $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $product['Product']['off'] / 100);
 ?>
-<div class="owl-item">
-    <div class="item">
+<div class="owl-item" style="direction: ltr !important;">
+    <div class="item" style="direction: ltr !important;">
         <div class="product" style="height: 370px;">
             <div class="image" style="margin-bottom: 50px;">
                 <?php

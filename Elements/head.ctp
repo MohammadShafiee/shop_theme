@@ -12,7 +12,8 @@
 
     <?php
     echo $this->Html->css(array(
-        '/assets/bootstrap/css/bootstrap.css',
+        /*'/assets/bootstrap/css/bootstrap.css',*/
+        '/bootstrap-3.1.1-RTL/css/bootstrap.rtl.css',
         '/assets/css/skin-3.css',
         '/assets/css/style.css',
     ));

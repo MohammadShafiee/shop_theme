@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
-                <div class="pull-left ">
+                <div class="pull-right ">
                     <ul class="userMenu ">
                         <li class="phone-number">
                             <a href="callto:+88016000000">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
-                <div class="pull-right">
+                <div class="pull-left">
                     <ul class="userMenu">
                         <?php
                         if($this->Session->read('Auth.User')){

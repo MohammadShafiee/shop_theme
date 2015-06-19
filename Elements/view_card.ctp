@@ -1,4 +1,4 @@
-<div class="nav navbar-nav navbar-right hidden-xs">
+<div class="nav navbar-nav navbar-left hidden-xs">
     <div class="dropdown  cartMenu ">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-shopping-cart"> </i>
@@ -39,9 +39,9 @@
                                         <div class="price"><span> <?php echo number_format($item['price'])?> </span></div>
                                     </div>
                                 </td>
-                                <td style="width:10%" class="miniCartQuantity"><a> <i class="fa fa-shopping-cart"></i> <?php echo $item['number']?> </a></td>
-                                <td style="width:15%" class="miniCartSubtotal"><span class="item-total-price-<?php echo $item['foreign_key']; ?>"><?php echo $itemTotalPrice;?></span></td>
-                                <td style="width:5%" class="delete">
+                                <td style="width:9%" class="miniCartQuantity"><a> <i class="fa fa-shopping-cart"></i> <?php echo $item['number']?> </a></td>
+                                <td style="width:18%" class="miniCartSubtotal"><span class="item-total-price-<?php echo $item['foreign_key']; ?>"><?php echo $itemTotalPrice;?></span></td>
+                                <td style="width:8%" class="delete">
                                     <a class="remove-from-cart"> <i class="fa fa-remove" style="color: darkred;"></i> </a>
                                 </td>
                             </tr>

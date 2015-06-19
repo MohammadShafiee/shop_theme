@@ -1,9 +1,9 @@
 <footer>
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> &copy; TSHOP 2014. All right reserved. </p>
+            <p class="pull-right"> &copy; <span>کلیه حقوق کپی رایت برای شرکت ... محفوظ می باشد.</span> </p>
 
-            <div class="pull-right paymentMethodImg">
+            <div class="pull-left paymentMethodImg">
                 <?php
                 echo $this->Html->image('/images/site/payment/master_card.png', array(
                     'height' => "30",

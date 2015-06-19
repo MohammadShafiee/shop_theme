@@ -1,5 +1,10 @@
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel({navigation: true, items: 4, itemsTablet: [768, 2]});
+    $(".owl-carousel").owlCarousel({
+        rtl:true,
+        navigation: true,
+        items: 4,
+        itemsTablet: [768, 2]
+    });
     var owl = $(".brand-carousel");
     owl.owlCarousel({navigation: false, pagination: false, items: 8, itemsTablet: [768, 4], itemsMobile: [400, 2]});
     $("#nextBrand").click(function () {

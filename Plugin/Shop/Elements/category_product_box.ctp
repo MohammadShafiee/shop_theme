@@ -2,7 +2,7 @@
 $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $product['Product']['off'] / 100);
 ?>
 <div class="item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-    <div class="product" style="height: 370px;">
+    <div class="product" style="/*height: 370px;*/">
         <div class="image" style="margin-bottom: 50px;">
             <?php
             $imagePath = '';
@@ -29,9 +29,12 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
             }
             ?>
         </div>
-        <div class="detail-group" style="position: absolute; bottom: 5px;margin: auto;left: 0;right: 0;">
+        <div class="detail-group" style="/*position: absolute; bottom: 5px;margin: auto;left: 0;right: 0;*/">
             <div class="description">
                 <h4><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>"><?php echo $product['Product']['title']; ?></a></h4>
+            </div>
+            <div class="list-description">
+                <p><?php echo $product['Product']['description']; ?></p>
             </div>
             <div class="price">
                 <span><?php echo number_format($offPrice); ?></span>
