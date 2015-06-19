@@ -84,13 +84,13 @@ $(document).ready(function () {
         $(this).addClass("active");
         $(this).attr('data-original-title', 'Added to Wishlist');
     });
-    $(".change-view .list-view, .change-view-flat .list-view").click(function (e) {
+    $('body').on('click', ".change-view .list-view, .change-view-flat .list-view", function (e) {
         e.preventDefault();
         $('.item').addClass("list-view");
         $('.add-fav').attr("data-placement", $(this).attr("left"));
         $('.categoryProduct > .item').detectGridColumns();
     });
-    $(".change-view .grid-view, .change-view-flat .grid-view").click(function (e) {
+    $('body').on('click', ".change-view .grid-view, .change-view-flat .grid-view", function (e) {
         e.preventDefault();
         $('.item').removeClass("list-view");
         $('.categoryProduct > .item').detectGridColumns();

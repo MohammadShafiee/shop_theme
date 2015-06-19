@@ -14,7 +14,15 @@
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12">
             <?php echo $this->Layout->blocks('view_category_center_top');?>
-            <?php echo $this->element('category_products_list'); ?>
+            <div class="category-products-container">
+                <?php echo $this->element('category_products_list'); ?>
+            </div>
         </div>
     </div>
 </div>
+<style>
+    .minict_wrapper {
+        width: 40%;
+        float: right !important;
+    }
+</style>

@@ -39,16 +39,16 @@
             }
             $("div.loader").show();
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: "<?php echo $this->request->here(); ?>",
                 data: JSON.stringify(properties),
                 contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function(response){
-                    if (response.status == 'success') {
-                        $('div.category-products-container').html(response.content);
-                    }
+                dataType: "text",
+                success: function(content){
+                    $('div.category-products-container').html(content);
                     setTimeout( "$('div.loader').hide();", 400 );
+                },
+                error: function(){
                 }
             });
         });
