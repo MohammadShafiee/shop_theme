@@ -223,9 +223,12 @@ $(document).ready(function () {
         $('html,body').animate({scrollTop: dest - 51}, 1000, 'swing');
     });
 });
-function productAddToCartForm(productId){
+function productAddToCartForm(productId, formData){
+    var data = typeof formData !== 'undefined' ? formData : [];
     $.ajax({
         url: webroot + "shop/products/add_to_cart/" + productId,
+        data: data,
+        type: 'post',
         success: function(response){
             response = JSON.parse(response);
             if (response.status == 'success') {

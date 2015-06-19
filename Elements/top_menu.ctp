@@ -16,26 +16,26 @@
             <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
                 <div class="pull-right">
                     <ul class="userMenu">
-                        <li>
-                            <?php
-                            echo $this->Html->link(
-                                '<span class="hidden-xs">'.__d('shop', 'My Profile').'</span>
-                                    <i class="glyphicon glyphicon-user hide visible-xs"></i>',
-                                array(
-                                    'plugin' => 'users',
-                                    'controller' => 'users',
-                                    'action' => 'view',
-                                    $this->Session->read('Auth.User.username')
-                                ),
-                                array(
-                                    'escape' => false
-                                )
-                            );
-                            ?>
-                        </li>
                         <?php
                         if($this->Session->read('Auth.User')){
                         ?>
+                            <li>
+                                <?php
+                                echo $this->Html->link(
+                                    '<span class="hidden-xs">'.__d('shop', 'My Profile').'</span>
+                                        <i class="glyphicon glyphicon-user hide visible-xs"></i>',
+                                    array(
+                                        'plugin' => 'users',
+                                        'controller' => 'users',
+                                        'action' => 'view',
+                                        $this->Session->read('Auth.User.username')
+                                    ),
+                                    array(
+                                        'escape' => false
+                                    )
+                                );
+                                ?>
+                            </li>
                             <li>
                                 <?php
                                 echo $this->Html->link(

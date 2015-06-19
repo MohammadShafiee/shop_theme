@@ -7,14 +7,11 @@
     ?>
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12">
-            <div class="panel-group" id="accordionNo">
-                <?php echo $this->element('categories_tree_panel'); ?>
-            </div>
+            <?php echo $this->element('categories_tree_panel'); ?>
+            <?php echo $this->Layout->blocks('category_side_panel');?>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-12">
-            <?php echo $this->Layout->blocks('category_top_slider');?>
-        </div>
-        <div class="col-lg-12 col-md-12 col-sm-12">
+            <?php echo $this->Layout->blocks('index_category_center_top');?>
             <?php echo $this->element('category_carousel_latest_products'); ?>
             <?php echo $this->element('category_carousel_best_seller_products'); ?>
         </div>

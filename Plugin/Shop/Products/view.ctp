@@ -61,7 +61,7 @@ $this->end();
             <?php endif; ?>
             <div class="cart-actions">
                 <div class="addto">
-                    <button onclick="javascript:productAddToCartForm(<?php echo $product['Product']['id']?>);" class="button btn-cart cart first" title="Add to Cart" type="button">افزودن به سبد خرید</button>
+                    <button onclick="javascript:productAddToCartForm(<?php echo $product['Product']['id']?>, $('form#ProductAddToCardForm').serialize());" class="button btn-cart cart first" title="Add to Cart" type="button">افزودن به سبد خرید</button>
                 </div>
             </div>
             <?php echo $this->Form->end();?>
