@@ -924,7 +924,7 @@ legend {
     float: right;
     font-size: 12px;
     line-height: 30px;
-    padding: 0 20px 0 0;
+    padding: 0 0 0 20px;
     text-decoration: none;
     transition: opacity 0.2s ease-out 0s;
     -webkit-transition: opacity 0.21s ease-out 0s;
