@@ -1,4 +1,10 @@
-<?php echo $this->element('Shop.search_price_property'); ?>
+<?php
+    $named_products = $this->request->params['named']['p'];
+    if(!is_array($named_products)){
+        $named_products = array($named_products);
+    }
+    echo $this->element('Shop.search_price_property');
+?>
 <?php foreach($categoryProperties as $property): ?>
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -10,7 +16,14 @@
             <?php foreach($property['PropertyValue'] as $propertyValue): ?>
                 <div class="block-element" data-property-id="<?php echo $property['Property']['id'];?>" data-property-value="<?php echo $propertyValue['id']; ?>">
                     <label>
-                        <input type="checkbox" name="p:<?php echo $property['Property']['id']; ?>" value="<?php echo $propertyValue['id'] ?>" style="display: none;"/>
+                        <?php
+                            $checked = false;
+                            $search = $property['Property']['id'] . ':' . $propertyValue['id'];
+                            if(array_search($search, $named_products) !== false){
+                                $checked = true;
+                            }
+                        ?>
+                        <input type="checkbox" <?php echo $checked?'checked':''; ?> name="p:<?php echo $property['Property']['id']; ?>" value="<?php echo $propertyValue['id'] ?>" />
                         <span><?php echo $propertyValue['option']; ?></span>
                     </label>
                 </div>

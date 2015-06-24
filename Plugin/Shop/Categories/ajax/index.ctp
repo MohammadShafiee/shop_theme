@@ -1,1 +1,1 @@
-<?php echo $this->element('category_products_list');
+<?php echo $this->element("Shop.category_products_items"); ?>
