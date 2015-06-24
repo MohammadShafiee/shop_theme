@@ -1,5 +1,5 @@
 <?php
-    $named_products = $this->request->params['named']['p'];
+    $named_products = isset($this->request->params['named']['p'])?$this->request->params['named']['p']:array();
     if(!is_array($named_products)){
         $named_products = array($named_products);
     }
