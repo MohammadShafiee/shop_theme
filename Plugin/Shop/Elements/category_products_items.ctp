@@ -48,7 +48,18 @@
         $window_href_segments[] = $object;
     }
 ?>
+<?php
+    $baseUrl = $this->request->url;
+    $urlParts = explode('/', $baseUrl);
+    foreach($urlParts as $key => $part){
+        if(strpos($part, ':')){
+            unset($urlParts[$key]);
+        }
+    }
+    $baseUrl = Router::fullBaseUrl() . $this->request->webroot . implode('/', $urlParts);
+?>
 <script>
+    var base_url = '<?php echo $baseUrl; ?>';
     var window_href_segments = <?php echo json_encode($window_href_segments) ?>;
     var pageCounter = '<?php echo $this->Paginator->counter(); ?>';
 </script>

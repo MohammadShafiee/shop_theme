@@ -84,7 +84,6 @@
             if(new_url != ""){
                 new_url = '/' + new_url ;
             }
-            var base_url = 'http://localhost/_croogo/shop/category/26';
             new_url = base_url + new_url;
             console.log(new_url);
             window.history.pushState("", "", new_url);
