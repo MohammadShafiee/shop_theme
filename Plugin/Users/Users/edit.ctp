@@ -2,20 +2,19 @@
 $this->request->data['User'] = $user['User'];
 ?>
 <div class="container main-container">
-    <div class="row">
-        <div class="breadcrumbDiv col-lg-12">
-            <ul class="breadcrumb">
-                <li> <a href="index.html">Home</a> </li>
-                <li class="active"> Authentication </li>
-            </ul>
-        </div>
-    </div>
+    <?php
+    echo $this->element('product_bread_crumb', array(
+        'paths' => [],
+        'currentPath' => $title_for_layout
+    ));
+    echo $this->Session->flash();
+    ?>
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-7">
             <h1 class="section-title-inner"><span><i class="fa fa-lock"></i> <?php echo $title_for_layout; ?></span></h1>
             <div class="row userInfo">
                 <div class="col-xs-12 col-sm-6">
-                    <h2 class="block-title-2"> <?php echo __d('shop', 'My Profile Information');?> </h2>
+                    <h2 class="block-title-2"> اطالعات کاربری من </h2>
                     <?php
                     echo $this->Form->create('User', array(), array(
                         'role' => 'form',
@@ -36,7 +35,7 @@ $this->request->data['User'] = $user['User'];
                             'div' => array(
                                 'class' => 'form-group'
                             ),
-                            'label' => __d('croogo', 'password'),
+                            'label' => __d('croogo', 'Password'),
                             'class' => 'form-control',
                             'value' => ''
                         ));

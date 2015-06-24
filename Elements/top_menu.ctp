@@ -5,7 +5,7 @@
                 <div class="pull-right ">
                     <ul class="userMenu ">
                         <li class="phone-number">
-                            <a href="callto:+88016000000">
+                            <a href="#">
                                 <span> <i class="glyphicon glyphicon-phone-alt "></i></span>
                                 <span class="hidden-xs" style="margin-left:5px"> 88 01680 53 1352 </span>
                             </a>
@@ -22,13 +22,12 @@
                             <li>
                                 <?php
                                 echo $this->Html->link(
-                                    '<span class="hidden-xs">'.__d('shop', 'My Profile').'</span>
-                                        <i class="glyphicon glyphicon-user hide visible-xs"></i>',
+                                    '<span class="hidden-xs">خروج</span>
+                                    <i class="glyphicon glyphicon-log-in hide visible-xs "></i>',
                                     array(
                                         'plugin' => 'users',
                                         'controller' => 'users',
-                                        'action' => 'view',
-                                        $this->Session->read('Auth.User.username')
+                                        'action' => 'logout',
                                     ),
                                     array(
                                         'escape' => false
@@ -39,12 +38,13 @@
                             <li>
                                 <?php
                                 echo $this->Html->link(
-                                    '<span class="hidden-xs">'.__d('shop', 'Sign Out').'</span>
-                                    <i class="glyphicon glyphicon-log-in hide visible-xs "></i>',
+                                    '<span class="hidden-xs">پروفایل من</span>
+                                        <i class="glyphicon glyphicon-user hide visible-xs"></i>',
                                     array(
                                         'plugin' => 'users',
                                         'controller' => 'users',
-                                        'action' => 'logout',
+                                        'action' => 'edit',
+                                        $this->Session->read('Auth.User.username')
                                     ),
                                     array(
                                         'escape' => false
@@ -58,7 +58,7 @@
                             <li>
                                 <?php
                                 echo $this->Html->link(
-                                    '<span class="hidden-xs">'.__d('shop', 'Sign In').'</span>
+                                    '<span class="hidden-xs">ورود</span>
                                     <i class="glyphicon glyphicon-log-in hide visible-xs "></i>',
                                     array(
                                         'plugin' => 'users',
@@ -74,7 +74,7 @@
                             <li>
                                 <?php
                                 echo $this->Html->link(
-                                    __d('shop', 'Create Account'),
+                                    'ایجاد حساب جدید',
                                     array(
                                         'plugin' => 'users',
                                         'controller' => 'users',
