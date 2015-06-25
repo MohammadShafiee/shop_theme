@@ -13,7 +13,7 @@
         <div class="col-lg-9 col-md-9 col-sm-12">
             <?php echo $this->Layout->blocks('index_category_center_top');?>
             <?php echo $this->element('category_carousel_latest_products'); ?>
-            <?php echo $this->element('category_carousel_best_seller_products'); ?>
+<!--            --><?php //echo $this->element('category_carousel_best_seller_products'); ?>
         </div>
     </div>
 </div>

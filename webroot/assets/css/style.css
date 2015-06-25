@@ -2634,7 +2634,21 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 #SimilarProductSlider .item {
     height: auto !important;
 }
-
+.categoryProduct .item .product{
+    min-height: 440px;
+}
+.item .detail-group{
+    bottom: 0;
+    position: absolute;
+}
+.item.list-view .product{
+    min-height: inherit;
+    min-height: 190px;
+}
+.item.list-view .detail-group{
+    bottom: inherit;
+    position: inherit;
+}
 .product {
     display: block;
     height: auto;
@@ -2646,6 +2660,8 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
     border: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
     text-align: center;
+    position: relative;
+    min-height: 370px;
 }
 
 .product:hover {
@@ -2759,7 +2775,7 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 }
 
 .item.list-view .image img {
-    max-height: 260px;
+    max-height: 170px;
     width: auto !important;
 }
 
@@ -2771,6 +2787,7 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 
 .item.list-view h4 a {
     font-weight: 600;
+    font-size: 17px;
 }
 
 .item.list-view .description {
@@ -2864,7 +2881,8 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 .description {
     margin: 0 auto;
     min-height: 40px;
-    max-width: 235px;
+    /*max-width: 235px;*/
+    padding: 0 10px;
 }
 
 .list-view .description {
@@ -2894,11 +2912,12 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
     color: #fff;
     display: inline-block;
     float: left;
-    font-family: Oswald, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'B yekan',tahoma, Arial , san-serif;
     font-size: 16px;
     font-weight: lighter;
     height: 100%;
     padding: 3px 5px;
+    direction: ltr;
 }
 
 .item h4 {
@@ -3506,7 +3525,7 @@ h5.parallaxSubtitle {
 }
 
 .nav-stacked > li {
-    border-bottom: solid 1px #eee;
+    /*border-bottom: solid 1px #eee;*/
 }
 
 .nav-stacked > li a {
@@ -3727,16 +3746,16 @@ h5.parallaxSubtitle {
 }
 
 .product-title {
-    font-size: 30px;
+    font-size: 17px;
     font-weight: 600;
     letter-spacing: 0.25px;
-    line-height: 1;
+    line-height: 41px;
     margin-bottom: 0;
     text-transform: uppercase;
 }
 
 .product-price {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     line-height: normal;
     margin-bottom: 10px;
@@ -3799,7 +3818,7 @@ h5.parallaxSubtitle {
 }
 
 .nav-tabs li a {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'B yekan',tahoma, Arial , san-serif;
     font-size: 14px;
     font-weight: 200;
     letter-spacing: 2px;
@@ -3869,12 +3888,12 @@ h5.parallaxSubtitle {
     color: #FFFFFF;
     display: block;
     float: right;
-    font-family: Oswald, Helvetica Neue, Arial, sans-serif;
-    font-size: 18px;
+    font-family: 'B yekan',tahoma, Arial , san-serif !important;
+    font-size: 15px;
     font-weight: lighter;
     line-height: 1em;
     margin: 0;
-    padding: 14px 20px;
+    padding: 10px;
     text-transform: uppercase;
     transition: all 0.25s ease 0s;
     -moz-transition: all 0.25s ease 0s;
@@ -4086,7 +4105,7 @@ tr.CartProduct td:nth-child(2) {
 }
 
 .item h4 a {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'B yekan',tahoma, Arial , san-serif !important;
     font-weight: normal;
 }
 
@@ -5674,4 +5693,13 @@ div.quickview {
     bottom: 0;
     display: none;
     z-index: 100000000;
+}
+p{
+    font-family: tahoma;
+    font-size: 12px;
+    text-align: justify;
+}
+.icr{
+    font-family: 'B yekan',tahoma, Arial , san-serif;
+    font-size: 14px;
 }
