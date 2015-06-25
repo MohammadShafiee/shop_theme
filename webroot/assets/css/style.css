@@ -4022,7 +4022,7 @@ tr.CartProduct td, tr.CartProduct th {
 }
 
 tr.CartProduct td:nth-child(2) {
-    text-align: left;
+    text-align: right;
 }
 
 .cartTable {
@@ -4062,6 +4062,7 @@ tr.CartProduct td:nth-child(2) {
 
 .rightSidebar #cart-summary tr:first-child td {
     border: none;
+    padding: 5px;
 }
 
 .cartMiniTable {

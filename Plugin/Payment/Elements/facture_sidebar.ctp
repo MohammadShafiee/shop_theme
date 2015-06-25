@@ -3,7 +3,7 @@
         <div class="table-block" id="order-detail-content">
             <?php
             echo $this->Html->link(
-                '<i class="fa fa-arrow-right"></i> رفتن به درگاه بانک و پرداخت',
+                'رفتن به درگاه بانک و پرداخت <i class="fa fa-arrow-left"></i>',
                 '#',
                 array(
                     'onClick' => "$(this).closest('form').submit();",

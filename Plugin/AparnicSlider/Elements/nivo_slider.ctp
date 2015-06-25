@@ -27,7 +27,7 @@ echo $this->Html->css('AparnicSlider.nivo_slider/nivo-slider');
 		animSpeed: 500,
 		pauseTime: 3000,
 		startSlide: 0,
-		directionNav: false,
+		directionNav: true,
 		directionNavHide: true,
 		controlNav: false,
 		controlNavThumbs: false,

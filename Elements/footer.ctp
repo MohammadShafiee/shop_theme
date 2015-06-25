@@ -5,30 +5,30 @@
 
             <div class="pull-left paymentMethodImg">
                 <?php
-                echo $this->Html->image('/images/site/payment/master_card.png', array(
-                    'height' => "30",
-                    'class' => "pull-right"
-                ));
-                echo $this->Html->image('/images/site/payment/visa_card.png', array(
-                    'height' => "30",
-                    'class' => "pull-right"
-                ));
-                echo $this->Html->image('/images/site/payment/paypal.png', array(
-                    'height' => "30",
-                    'class' => "pull-right"
-                ));
-                echo $this->Html->image('/images/site/payment/american_express_card.png', array(
-                    'height' => "30",
-                    'class' => "pull-right"
-                ));
-                echo $this->Html->image('/images/site/payment/discover_network_card.png', array(
-                    'height' => "30",
-                    'class' => "pull-right"
-                ));
-                echo $this->Html->image('/images/site/payment/google_wallet.png', array(
-                    'height' => "30",
-                    'class' => "pull-right"
-                ));
+//                echo $this->Html->image('/images/site/payment/master_card.png', array(
+//                    'height' => "30",
+//                    'class' => "pull-right"
+//                ));
+//                echo $this->Html->image('/images/site/payment/visa_card.png', array(
+//                    'height' => "30",
+//                    'class' => "pull-right"
+//                ));
+//                echo $this->Html->image('/images/site/payment/paypal.png', array(
+//                    'height' => "30",
+//                    'class' => "pull-right"
+//                ));
+//                echo $this->Html->image('/images/site/payment/american_express_card.png', array(
+//                    'height' => "30",
+//                    'class' => "pull-right"
+//                ));
+//                echo $this->Html->image('/images/site/payment/discover_network_card.png', array(
+//                    'height' => "30",
+//                    'class' => "pull-right"
+//                ));
+//                echo $this->Html->image('/images/site/payment/google_wallet.png', array(
+//                    'height' => "30",
+//                    'class' => "pull-right"
+//                ));
                 ?>
             </div>
         </div>
