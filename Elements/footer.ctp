@@ -48,6 +48,7 @@ echo $this->Html->script(array(
     '/assets/js/bootstrap.touchspin.js',
     '/assets/js/home.js',
     '/assets/js/script.js',
+    'Shop.jquery.filtering.js',
 ));
 echo $this->fetch('bottomScript');
 ?>
