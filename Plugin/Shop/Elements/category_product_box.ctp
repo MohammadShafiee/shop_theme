@@ -2,7 +2,7 @@
 $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $product['Product']['off'] / 100);
 ?>
 <div class="item col-lg-4 col-md-4 col-sm-4 col-xs-6">
-    <div class="product" style="/*height: 370px;*/">
+    <div class="product">
         <div class="image" style="margin-bottom: 50px;">
             <?php
             $imagePath = '';
@@ -38,7 +38,7 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
             </div>
             <div class="price">
                 <span><?php echo number_format($offPrice); ?></span>
-                <span class="old-price"><?php echo $product['Product']['off'] ? number_format($product['Product']['price']) : '&nbsp;'; ?></span>
+                <?php echo $product['Product']['off'] ? ('<span class="old-price">' . number_format($product['Product']['price']) . '</span>') : ''; ?>
             </div>
             <div class="action-control"> <a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $product['Product']['id'])); ?>" class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> <span>افزودن به سبد خرید</span> </span> </a> </div>
         </div>
