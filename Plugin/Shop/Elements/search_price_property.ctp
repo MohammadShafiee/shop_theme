@@ -13,10 +13,10 @@
     </div>
     <div id="collapsePrice" class="panel-collapse collapse in">
         <div class="panel-body priceFilterBody">
-            <p><?php echo __d('shop', 'Enter a Price range '); ?></p>
+            <p>بازه ی قیمت را وارد کنید :</p>
             <?php
                 echo $this->Html->div('form-group pull-right',
-                    '<input type="text" style="width:100%;" class="form-control" name="minPrice" value="' .$minPrice. '" id="minPrice" placeholder="'.__d('shop', 'From').'">',
+                    '<input type="text" style="width:100%;" class="form-control" name="minPrice" value="' .$minPrice. '" id="minPrice" placeholder="از">',
                     array(
                         'style' => 'width:44%',
                     )
@@ -25,7 +25,7 @@
             <div class="form-group sp pull-right"> - </div>
             <?php
                 echo $this->Html->div('form-group pull-right',
-                    '<input type="text" style="width:100%;" class="form-control" name="maxPrice" value="'. $maxPrice .'" id="maxPrice" placeholder="' . __d('shop', 'To') . '">',
+                    '<input type="text" style="width:100%;" class="form-control" name="maxPrice" value="'. $maxPrice .'" id="maxPrice" placeholder="تا">',
                     array(
                         'style' => 'width:44%',
                     )

@@ -1,15 +1,14 @@
 <div class="w100 productFilter clearfix">
-    <p class="pull-left"> Showing <strong class="pagination-counter"><?php echo $this->Paginator->counter(); ?></strong>  </p>
+    <p class="pull-left" style="direction: ltr"> <span>نمایش</span> <strong class="pagination-counter" style="font-family: BYekan;"><?php echo $this->Paginator->counter(array('separator' => ' از ')); ?></strong>  </p>
     <div class="pull-right ">
         <div class="change-order pull-right">
             <select class="form-control" name="sort" id="change-order">
-                <option value="0">Default sorting</option>
-                <option value="price" <?php if(isset($this->request->params['named']['sort']) && $this->request->params['named']['sort'] == 'price')echo 'selected'; ?>>Price</option>
+                <option value="0" selected>مرتب سازی پیش فرض</option>
+                <option value="price" <?php if(isset($this->request->params['named']['sort']) && $this->request->params['named']['sort'] == 'price')echo 'selected'; ?>>قیمت</option>
             </select>
             <select class="form-control" name="direction" id="change-direction">
-                <option value="0"><?php echo __d('shop', 'Sorting Type'); ?></option>
-                <option value="asc" <?php if(isset($this->request->params['named']['direction']) && $this->request->params['named']['direction'] == 'asc')echo 'selected'; ?>><?php echo __d('shop', 'asc'); ?></option>
-                <option value="desc" <?php if(isset($this->request->params['named']['direction']) && $this->request->params['named']['direction'] == 'desc')echo 'selected'; ?>><?php echo __d('shop', 'desc'); ?></option>
+                <option value="asc" <?php if(isset($this->request->params['named']['direction']) && $this->request->params['named']['direction'] == 'asc')echo 'selected'; ?>>صعودی</option>
+                <option value="desc" <?php if(isset($this->request->params['named']['direction']) && $this->request->params['named']['direction'] == 'desc')echo 'selected'; ?>>نزولی</option>
             </select>
             <!--<button id="sort-products" class="btn btn-default pull-left" style="margin-right: 6px;min-height: 35px;"><?php /*echo __d('shop', 'Sort'); */?></button>-->
         </div>
