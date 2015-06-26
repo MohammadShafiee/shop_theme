@@ -2,11 +2,19 @@ $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
         rtl:true,
         navigation: true,
+        navigationText: ["قبل", "بعد"],
         items: 4,
         itemsTablet: [768, 2]
     });
     var owl = $(".brand-carousel");
-    owl.owlCarousel({navigation: false, pagination: false, items: 8, itemsTablet: [768, 4], itemsMobile: [400, 2]});
+    owl.owlCarousel(
+        {
+            navigation: false,
+            pagination: false,
+            items: 8,
+            itemsTablet: [768, 4],
+            itemsMobile: [400, 2]
+        });
     $("#nextBrand").click(function () {
         owl.trigger('owl.next');
     })

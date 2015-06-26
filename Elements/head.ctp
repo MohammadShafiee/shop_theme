@@ -102,5 +102,9 @@
             .themeControll {
                 display: none;
             }
-        }</style>
+        }
+        .owl-buttons{
+            direction: ltr !important;
+        }
+    </style>
 </head>
