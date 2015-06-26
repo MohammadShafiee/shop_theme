@@ -3,7 +3,7 @@ $offPrice = $product['Product']['price'] - ($product['Product']['price'] * $prod
 ?>
 <div class="owl-item" style="direction: ltr !important;">
     <div class="item" style="direction: ltr !important;">
-        <div class="product" style="height: 370px;">
+        <div class="product">
             <div class="image" style="margin-bottom: 50px;">
                 <?php
                 $imagePath = '';
