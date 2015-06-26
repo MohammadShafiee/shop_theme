@@ -1,10 +1,5 @@
 <div class="container main-container">
-    <?php
-    echo $this->element('product_bread_crumb', array(
-        'paths' => [],
-        'currentPath' => $categoriesTree['Category']['title']
-    ));
-    ?>
+    <?php $this->set('currentPath', $categoriesTree['Category']['title']);?>
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12">
             <?php echo $this->element('categories_tree_panel'); ?>

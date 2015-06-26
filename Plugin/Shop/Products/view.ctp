@@ -12,10 +12,11 @@ $this->end();
     ));
     ?>
     <?php
-    echo $this->element('product_bread_crumb', array(
-        'paths' => $product['CategoryPath'],
-        'currentPath' => $product['Product']['title']
-    ));?>
+    $this->set(array(
+        'currentPath' => $categoriesTree['Category']['title'],
+        'paths' => $product['CategoryPath']
+    ));
+    ?>
     <div class="row transitionfx">
         <div class="col-lg-6 col-md-6 col-sm-6">
             <div class="main-image sp-wrap col-lg-12 no-padding" style="display: inline-block;">

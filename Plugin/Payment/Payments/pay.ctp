@@ -1,28 +1,6 @@
-<?php
-//echo $this->Html->css('Payment.style', array('inline' => false));
-//echo $this->Form->create('Payment');
-//echo $this->Payment->showFacture($facture);
-//?>
-<!---->
-<!--<div>-->
-<!--    --><?php //echo $this->Payment->showExtraFactureItems();?>
-<!--    --><?php //echo $this->Payment->showOfflineWayList();?>
-<!--    <div class="clear"></div>-->
-<!--    --><?php //echo $this->Payment->showOnlineWayList();?>
-<!--</div>-->
-<!---->
-<?php
-//echo $this->Form->submit(__d('payment', 'Pay facture'));
-//echo $this->Form->end();
-//?>
 <?php echo $this->Form->create('Payment');?>
 <div class="container main-container">
-    <?php
-    echo $this->element('Shop.product_bread_crumb', array(
-        'currentPath' => 'سبد خرید',
-        'paths' => array()
-    ));
-    ?>
+    <?php $this->set('currentPath', 'سبد خرید');?>
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-7">
             <h1 class="section-title-inner">

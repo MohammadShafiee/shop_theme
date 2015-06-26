@@ -1,10 +1,5 @@
 <div class="container main-container">
-    <?php
-    echo $this->element('product_bread_crumb', array(
-        'paths' => [],
-        'currentPath' => $categoriesTree['Category']['title']
-    ));
-    ?>
+    <?php $this->set('currentPath', $categoriesTree['Category']['title']);?>
     <?php echo $this->Form->create('Category', array(
         'url' => Router::url($this->request->here(false), true),
         'type' => 'GET',
