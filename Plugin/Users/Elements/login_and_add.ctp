@@ -1,10 +1,5 @@
 <div class="container main-container">
-    <?php
-    echo $this->element('product_bread_crumb', array(
-        'paths' => [],
-        'currentPath' => $title_for_layout
-    ));
-    ?>
+
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-7">
             <h1 class="section-title-inner"><span><i class="fa fa-lock"></i> <?php echo $title_for_layout; ?></span></h1>

@@ -7,6 +7,7 @@
                 ?>
             </li>
             <?php
+            $paths = isset($paths) ? $paths : array();
             foreach($paths as $path){
                 ?>
                 <li>
@@ -15,8 +16,10 @@
                 </li>
             <?php
             }
+            $currentPath = !isset($currentPath) ? (isset($title_for_layout) ? $title_for_layout : '') : $currentPath;
             ?>
             <li class="active"><?php echo $currentPath;?></li>
         </ul>
     </div>
 </div>
+<div class="clearfix"></div>
