@@ -4,7 +4,7 @@ if(isset(${'parallaxImageUrl_'.$block['alias']})) {
 ?>
     <style>
         .parallax-image-<?php echo str_replace('_','-',$block['alias'])?> {
-            background: url(<?php echo ${'parallaxImageUrl_'.$block['alias']}?>) fixed;
+            background: url(<?php echo '/' . trim(${'parallaxImageUrl_'.$block['alias']}, '/')?>) fixed;
             background-attachment: fixed;
             background-size: cover;
         }

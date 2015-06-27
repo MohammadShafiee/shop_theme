@@ -7,25 +7,25 @@
                         <h1 class="title-big text-center section-title-style2">
                             <span> <?php echo $contact['Contact']['title'];?> </span>
                         </h1>
-                        <p class="lead text-center">
+                        <p class="text-justify" style="font-size: 15px; line-height: 28px">
                             <?php echo $contact['Contact']['body'];?>
                         </p>
                         <hr>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <h3 class="block-title-5">
-                                    Customer care
+                                    اطلاعات تماس ما
                                 </h3>
                                 <p>
                                     <?php echo $contact['Contact']['address'];?>
                                     <br>
                                     <strong>
-                                        Phone number
+                                        شماره تلفن تماس:
                                     </strong>
                                     : <?php echo $contact['Contact']['phone'];?>
                                     <br>
                                     <strong>
-                                        Email us
+                                        ایمیل:
                                     </strong>
                                     : <?php echo $contact['Contact']['email'];?>
                                 </p>
