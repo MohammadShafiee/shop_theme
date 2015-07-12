@@ -49,7 +49,10 @@ echo $this->Html->script(array(
     '/assets/js/home.js',
     '/assets/js/script.js',
     'Shop.jquery.filtering.js',
-    'Shop.jquery.remove.from.cart.js',
+    'Shop.jquery.product.combinations.js',
+    /*'Shop.jquery.remove.from.cart.js',
+    '/colorpicker/js/bootstrap-colorpicker.js',
+    '/colorpicker/js/docs.js',*/
 ));
 echo $this->fetch('bottomScript');
 ?>

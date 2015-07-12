@@ -13,7 +13,7 @@
                     <td style="width:15%">مبلغ</td>
                 </tr>
                 <?php
-                foreach($factureItems as $item){
+                foreach($factureItems as $key => $item){
                 ?>
                     <tr class="CartProduct">
                         <td class="CartProductThumb">
@@ -36,7 +36,7 @@
                         </td>
                         <td>
                             <div class="CartDescription">
-                                <h4>
+                                <h4 style="padding-bottom: 5px;">
                                     <?php
                                     echo $this->Html->link(
                                         $item['title'],
@@ -45,26 +45,43 @@
                                             'controller' => 'products',
                                             'action' => 'view',
                                             $item['foreign_key']
-                                        )
+                                        ),
+                                        array('title' => $item['title'])
                                     );
                                     ?>
                                 </h4>
+                                <?php
+                                    if(!empty($item['FactureItemMeta'])) {
+                                        $itemMeta = [];
+                                        foreach ($item['FactureItemMeta'] as $meta) {
+                                            if (!empty($meta['FactureItemMeta']['property_value'])) {
+                                                $itemMeta[] = $meta['FactureItemMeta']['property_value'];
+                                            }
+                                        }
+                                        if (!empty($itemMeta)) {
+                                            $itemMeta = implode('، ', $itemMeta);
+                                            echo $this->Html->tag('span', $itemMeta, array(
+                                                'style' => 'display: inline-block;margin-bottom: 5px;color: #8C0303;'
+                                            ));
+                                        }
+                                    }
+                                ?>
                                 <div class="price"> <span><?php echo number_format($item['base_price']);?></span></div>
                             </div>
                         </td>
                         <td class="delete">
-                            <a title="Delete" onclick="productRemoveFromCart(<?php echo $item['foreign_key']?>, true, true)" class="force-delete">
+                            <a title="Delete" onclick="productRemoveFromCart(<?php echo $key; ?>, true, true)" class="force-delete">
                                 <i class="glyphicon glyphicon-trash fa-2x"></i>
                             </a>
                         </td>
                         <td>
                             <div class="input-group bootstrap-touchspin">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-link bootstrap-touchspin-down" type="button" onclick="productRemoveFromCart(<?php echo $item['foreign_key']?>)">-</button>
+                                    <button class="btn btn-link bootstrap-touchspin-down" type="button" onclick="productRemoveFromCart(<?php echo $key; ?>)">-</button>
                                 </span>
                                 <div class="quanitySniper form-control" style="color: gray; line-height: 30px"><?php echo number_format($item['number']);?></div>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-link bootstrap-touchspin-up" type="button" onclick="productAddToCartForm(<?php echo $item['foreign_key']?>)">+</button>
+                                    <button class="btn btn-link bootstrap-touchspin-up" type="button" onclick="productAddToCartForm(0, <?php echo $key; ?>)">+</button>
                                 </span>
                             </div>
                         </td>

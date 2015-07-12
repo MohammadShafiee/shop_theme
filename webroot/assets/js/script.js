@@ -1,11 +1,16 @@
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
+    var owl_carousel = $(".owl-carousel");
+    owl_carousel.owlCarousel({
         rtl:true,
         navigation: true,
         navigationText: ["قبل", "بعد"],
         items: 4,
         itemsTablet: [768, 2]
     });
+    owl_carousel.on("next.owl.carousel", function(event){
+        alert("on next.owl.carousel");
+    });
+
     var owl = $(".brand-carousel");
     owl.owlCarousel(
         {
@@ -236,10 +241,10 @@ $(document).ready(function () {
         $('html,body').animate({scrollTop: dest - 51}, 1000, 'swing');
     });
 });
-function productAddToCartForm(productId, formData){
+function productAddToCartForm(productId, factureItemKey, formData){
     var data = typeof formData !== 'undefined' ? formData : [];
     $.ajax({
-        url: webroot + "shop/products/add_to_cart/" + productId,
+        url: webroot + "shop/products/add_to_cart/" + productId + "/" + factureItemKey,
         data: data,
         type: 'post',
         success: function(response){
@@ -258,11 +263,11 @@ function productAddToCartForm(productId, formData){
  * @param reloadPage default is true ( reloading page )
  * @param force default is false ( not delete all at once )
  */
-function productRemoveFromCart(productId, reloadPage, force, callback){
+function productRemoveFromCart(factureItemKey, reloadPage, force, callback){
     reloadPage = typeof reloadPage !== 'undefined' ? reloadPage  : true;
     force = typeof force !== 'undefined' ? (force ? 1 : 0) : 0;
     $.ajax({
-        url: webroot + "shop/products/remove_from_cart/" + productId + '/' + force,
+        url: webroot + "shop/products/remove_from_cart/" + factureItemKey + '/' + force,
         success: function(response){
             response = JSON.parse(response);
             if((response.status == 'success') && !reloadPage){

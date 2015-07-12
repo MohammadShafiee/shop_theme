@@ -1,4 +1,5 @@
 <?php
+//echo'<pre/>';print_r($product['Combinations']);die;
 $this->append('bottomScript');
     echo $this->Html->script('/assets/js/smoothproducts.min.js');
 $this->end();
@@ -59,16 +60,22 @@ $this->end();
                     ?>
                 </div>
             </div>
+            <input type="hidden" id="combination_id" name="combination_id" value="0">
             <?php endif; ?>
             <div class="cart-actions">
                 <div class="addto">
-                    <button onclick="javascript:productAddToCartForm(<?php echo $product['Product']['id']?>, $('form#ProductAddToCardForm').serialize());" class="button btn-cart cart first" title="Add to Cart" type="button">افزودن به سبد خرید</button>
+                    <button onclick="javascript:productAddToCartForm(<?php echo $product['Product']['id']?>,0, $('form#ProductAddToCardForm').serialize());" class="button btn-cart cart first" title="Add to Cart" type="button">افزودن به سبد خرید</button>
                 </div>
             </div>
             <?php echo $this->Form->end();?>
-            <div class="clear"></div>
+                <div class="clear"></div>
             <?php echo $this->element('product_details', array('details' => $product['ProductMeta']));?>
             <div style="clear:both"></div>
         </div>
     </div>
 </div>
+<script>
+    var combinations = <?php echo json_encode($product['Combinations'], JSON_UNESCAPED_UNICODE); ?>;
+    var price = <?php echo $product['Product']['price']; ?>;
+    var off = <?php echo $product['Product']['off']; ?>;
+</script>

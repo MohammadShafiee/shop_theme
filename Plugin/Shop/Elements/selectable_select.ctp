@@ -12,5 +12,6 @@ echo $this->Form->input(
         'div' => array(
             'style' => 'float: right;width: 96%;',
         ),
+        'class' => 'selectable_on_order'
     )
 );

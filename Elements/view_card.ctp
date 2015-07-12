@@ -20,7 +20,7 @@
                     <tbody>
                     <?php
                     if($this->Session->check("pay.facture.FactureItem")){
-                        foreach($this->Session->read('pay.facture.FactureItem') as $item){
+                        foreach($this->Session->read('pay.facture.FactureItem') as $key => $item){
                             $itemTotalPrice = number_format($item['price'] * $item['number']);
                             ?>
                             <tr class="miniCartProduct" id="item-<?php echo $item['foreign_key']; ?>">
@@ -35,14 +35,36 @@
                                 </td>
                                 <td style="width:40%">
                                     <div class="miniCartDescription">
-                                        <h4><a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $item['foreign_key'])); ?>"><?php echo $item['title']?></a></h4>
+                                        <?php
+                                            $maxLength = 40;
+                                            $shortenTitle = mb_strlen($item['title']) > $maxLength ? mb_substr($item['title'], 0, $maxLength) . " ..." : $item['title'];
+                                        ?>
+                                        <h4>
+                                            <a href="<?php echo Router::url(array("plugin" => "shop", "controller" => "products", "action" => "view", $item['foreign_key'])); ?>" title="<?php echo $item['title']?>"><?php echo $shortenTitle; ?></a>
+                                        </h4>
+                                        <?php
+                                        if(!empty($item['FactureItemMeta'])) {
+                                            $itemMeta = [];
+                                            foreach ($item['FactureItemMeta'] as $meta) {
+                                                if (!empty($meta['FactureItemMeta']['property_value'])) {
+                                                    $itemMeta[] = $meta['FactureItemMeta']['property_value'];
+                                                }
+                                            }
+                                            if (!empty($itemMeta)) {
+                                                $itemMeta = implode('، ', $itemMeta);
+                                                echo $this->Html->tag('span', $itemMeta, array(
+                                                    'style' => 'display: inline-block;margin-bottom: 1px;color: #8C0303;'
+                                                ));
+                                            }
+                                        }
+                                        ?>
                                         <div class="price"><span> <?php echo number_format($item['price'])?> </span></div>
                                     </div>
                                 </td>
                                 <td style="width:9%" class="miniCartQuantity"><a> <i class="fa fa-shopping-cart"></i> <?php echo $item['number']?> </a></td>
                                 <td style="width:18%" class="miniCartSubtotal"><span class="item-total-price-<?php echo $item['foreign_key']; ?>"><?php echo $itemTotalPrice;?></span></td>
                                 <td style="width:8%" class="delete">
-                                    <a class="remove-from-cart"> <i class="fa fa-remove" style="color: darkred;"></i> </a>
+                                    <a class="remove-from-cart" onclick="productRemoveFromCart(<?php echo $key; ?>)"> <i class="fa fa-remove" style="color: darkred;"></i> </a>
                                 </td>
                             </tr>
                         <?php
