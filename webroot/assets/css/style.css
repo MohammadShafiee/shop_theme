@@ -2635,9 +2635,9 @@ h1.bolder-style.dark, h1.bolder-style.dark a {
 #SimilarProductSlider .item {
     height: auto !important;
 }
-.categoryProduct .item .product{
-    min-height: 440px;
-}
+/*.categoryProduct .item .product{*/
+    /*min-height: 440px;*/
+/*}*/
 .item .detail-group{
     bottom: 0;
     position: absolute;

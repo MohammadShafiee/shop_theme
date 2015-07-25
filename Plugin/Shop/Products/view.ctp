@@ -14,7 +14,7 @@ $this->end();
     ?>
     <?php
     $this->set(array(
-        'currentPath' => $categoriesTree['Category']['title'],
+        'currentPath' => $product['Category']['title'],
         'paths' => $product['CategoryPath']
     ));
     ?>
