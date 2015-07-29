@@ -55,7 +55,11 @@ $this->end();
                 <div class="filterBox clearfix" style="width: 100%;">
                     <?php
                     foreach($product['SelectableProperties'] as $selectable){
-                        echo $this->element('selectable_select', compact('selectable'));
+                        if($selectable['Property']['type'] == 'color'){
+                            echo $this->element('selectable_color', compact('selectable'));
+                        }else{
+                            echo $this->element('selectable_select', compact('selectable'));
+                        }
 //                        echo $this->element('selectable_'.$selectable['Property']['type'], compact('selectable'));
                     }
                     ?>

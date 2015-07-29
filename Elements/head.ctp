@@ -16,8 +16,6 @@
         '/bootstrap-3.1.1-RTL/css/bootstrap.rtl.css',
         '/assets/css/skin-3.css',
         '/assets/css/style.css',
-        '/colorpicker/css/bootstrap-colorpicker.css',
-        '/colorpicker/css/docs.css',
     ));
     echo $this->fetch('css');
     echo $this->Html->script(array(
